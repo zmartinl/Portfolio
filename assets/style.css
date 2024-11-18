@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
 
+:root{
+    overflow: hidden;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -22,11 +26,8 @@ body{
     color: white;
 }
 
-header{
+header {
     margin-top: 20px;
-    position: fixed;
-    top: 0;
-    left: 0;
     width: 100%;
     padding: 1rem 9%;
     background-color: transparent;
@@ -34,7 +35,26 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 100;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+}
+
+nav a {
+    font-size: 1.8rem;
+    color: white;
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover,
+nav a.activo {
+    color: #6a92c2;
+    border-bottom: 3px solid #6a92c2;
 }
 
 .logo{
@@ -64,21 +84,6 @@ body>a.activo{
     border-bottom: 3px solid #6a92c2;
 }
 
-nav a{
-    font-size: 1.8rem;
-    color: white;
-    margin-left: 4rem;
-    font-weight: 500;
-    transition: 0.3s ease;
-    border-bottom: 3px solid transparent;
-}
-
-nav a:hover,
-nav a.activo{
-    color: #6a92c2;
-    border-bottom: 3px solid #6a92c2;
-}
-
 
 section{
     min-height: 100vh;
@@ -91,6 +96,7 @@ section{
     align-items: center;
     gap: 8rem;
     background-color: black;
+    min-height: 86vh;
 }
 
 .contenido-inicio h1{
@@ -224,6 +230,41 @@ span{
         content: "Innovador";
     }
 }
+
+
+/***************/
+/* HABILIDADES */
+/***************/
+
+.habilidades{
+    margin-top: 5rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 8rem;
+    background-color: black;
+    min-height: 70vh;
+    flex-wrap: wrap;
+}
+
+.habilidad {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    border-radius: 1rem;
+    background-color: #161616;
+    box-shadow: 0 0 25px #6a92c2;
+    font-size: 1.7rem;
+    width: 38%;
+}
+
+
+/****************/
+/* MEDIA QUERYS */
+/****************/
 
 @media (max-width: 1000px){
     .inicio{
