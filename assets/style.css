@@ -263,99 +263,113 @@ span{
 
 
 /****************/
-/* MEDIA QUERYS */
+/* MEDIA QUERIES */
 /****************/
 
-@media (max-width: 1000px){
-    .inicio{
-        gap: 4rem;
-    }
-}
 
-@media(max-width:995px){
-    .inicio{
+@media (max-width: 768px) {
+    .inicio {
         flex-direction: column;
-        margin: 5rem 4rem;
+        gap: 3rem;
+        padding: 2rem;
     }
 
-    .contenido-inicio h3{
-        font-size: 2.5rem;
+    .contenido-inicio h1 {
+        font-size: 4.5rem;
     }
 
-    .contenido-inicio h1{
-        font-size: 5rem;
+    .contenido-inicio h3 {
+        font-size: 2.2rem;
     }
 
-    .imagen-inicio img{
-        width: 70vw;
-        margin-top: 4rem;
+    .contenido-inicio p {
+        font-size: 1.4rem;
+    }
+
+    .imagen-inicio img {
+        width: 60vw;
     }
 
     .logo {
+        font-size: 2.5rem;
+    }
+
+    nav {
+        display: none;
         position: fixed;
         top: 0;
-        left: 9%;
-        z-index: 101;
-        padding: 1rem 0;
-    }
-
-    nav{
-        margin-top: 5rem;
-        position: absolute;
-        display: none;
-        top: 0;
         right: 0;
-        width: 40%;
-        border-left: 3px solid #6a92c2;
-        border-bottom: 3px solid #6a92c2;
-        border-bottom-left-radius: 2rem;
-        padding: 1rem solid;
+        width: 50%;
         background-color: #161616;
-        border-top: 0.1rem solid rgba(0,0,0,0.1);
+        border-left: 2px solid #6a92c2;
+        border-bottom-left-radius: 1.5rem;
+        padding: 2rem;
     }
 
-    nav.activo{
+    nav.activo {
         display: block;
     }
 
-    nav a{
-        display: block;
-        font-size: 2rem;
-        margin: 3rem 0;
+    nav a {
+        font-size: 1.6rem;
+        margin: 2rem 0;
     }
 
     nav a:hover,
-    nav a.activo{
-        padding: 1rem;
-        border-radius: 0.5rem;
-        border-bottom: 0.5rem solid #6a92c2;
+    nav a.activo {
+        border-bottom: 2px solid #6a92c2;
     }
 }
 
-@media(max-width: 490px){
-    .contenido-inicio h3{
+
+@media (max-width: 480px) {
+    .inicio {
+        padding: 1rem;
+        gap: 2rem;
+    }
+
+    .contenido-inicio h1 {
+        font-size: 3.5rem;
+    }
+
+    .contenido-inicio h3 {
         font-size: 2rem;
     }
 
-    .contenido-inicio h1{
-        font-size: 4rem;
+    .contenido-inicio p {
+        font-size: 1.2rem;
     }
 
-    .imagen-inicio img{
+    .imagen-inicio img {
         width: 80vw;
     }
 
-    .logo{
-        left: 4%;
+    .logo {
+        font-size: 2rem;
+        left: 5%;
     }
 
-    nav{
-        width: 60%;
+    nav {
+        width: 70%;
+        border-left: 2px solid #6a92c2;
     }
-    
-    header>a{
-        display: none;
-        padding: 0;
-        margin: 0;
+
+    nav a {
+        font-size: 1.4rem;
+    }
+
+    .btn {
+        font-size: 1.4rem;
+        padding: 0.8rem 2rem;
+    }
+
+    .habilidades {
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .habilidad {
+        width: 80%;
+        font-size: 1.4rem;
     }
 }
