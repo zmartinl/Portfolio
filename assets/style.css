@@ -261,6 +261,55 @@ span{
     width: 38%;
 }
 
+/****************/
+/*   PROYECTOS  */
+/****************/
+
+.proyectos {
+    padding: 5rem 9%;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+.grid-proyectos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 7rem;
+    justify-items: center;
+}
+
+.proyecto {
+    background-color: #161616;
+    border-radius: 1rem;
+    padding: 2rem;
+    width: 100%;
+    box-shadow: 0 0 25px #6a92c2;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.proyecto:hover {
+    transform: scale(1.05);
+}
+
+.imagen-proyecto {
+    width: 100%;
+    border-radius: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.titulo-proyecto {
+    font-size: 2rem;
+    color: #6a92c2;
+    margin-bottom: 1rem;
+}
+
+.descripcion-proyecto {
+    font-size: 1.6rem;
+    color: #e4e4e4;
+}
+
 
 /****************/
 /* MEDIA QUERIES */
@@ -319,6 +368,14 @@ span{
     nav a.activo {
         border-bottom: 2px solid #6a92c2;
     }
+
+    .grid-proyectos {
+        grid-template-columns: 1fr;
+    }
+
+    .proyecto {
+        width: 90%;
+    }
 }
 
 
@@ -372,5 +429,13 @@ span{
     .habilidad {
         width: 80%;
         font-size: 1.4rem;
+    }
+
+    .grid-proyectos {
+        grid-template-columns: 1fr;
+    }
+
+    .proyecto {
+        width: 90%;
     }
 }
