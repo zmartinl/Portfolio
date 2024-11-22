@@ -341,7 +341,8 @@ span{
     }
 
     .imagen-inicio img {
-        width: 80vw;
+        margin-top: -4rem;
+        width: 65vw;
     }
 
     .logo {
