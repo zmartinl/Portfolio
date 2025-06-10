@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
 
-
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -11,11 +10,11 @@
     font-family: 'Poppins', sans-serif;
 }
 
-html{
+html {
     font-size: 62.5%;
 }
 
-body{
+body {
     margin: 0;
     padding: 0;
     width: 100%;
@@ -30,7 +29,6 @@ header {
     width: 100%;
     padding: 1rem 9%;
     background-color: transparent;
-    filter: drop-shadow(10px);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -56,7 +54,7 @@ nav a.activo {
     border-bottom: 3px solid #6a92c2;
 }
 
-.logo{
+.logo {
     font-size: 3rem;
     color: #6a92c2;
     font-weight: 800;
@@ -64,11 +62,11 @@ nav a.activo {
     transition: 0.5s ease;
 }
 
-.logo:hover{
+.logo:hover {
     transform: scale(1.1);
 }
 
-body>a{
+body > a {
     font-size: 1.8rem;
     color: white;
     margin-left: 4rem;
@@ -77,19 +75,18 @@ body>a{
     border-bottom: 3px solid transparent;
 }
 
-body>a:hover,
-body>a.activo{
+body > a:hover,
+body > a.activo {
     color: #6a92c2;
     border-bottom: 3px solid #6a92c2;
 }
 
-
-section{
+section {
     min-height: 100vh;
-    padding: 5rem 9% 5rem;
+    padding: 5rem 9%;
 }
 
-.inicio{
+.inicio {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -98,31 +95,31 @@ section{
     min-height: 86vh;
 }
 
-.contenido-inicio h1{
+.contenido-inicio h1 {
     font-size: 6rem;
     font-weight: 700;
     line-height: 1.3;
 }
 
-span{
+span {
     color: #6a92c2;
 }
 
-.contenido-inicio h3{
+.contenido-inicio h3 {
     font-size: 4rem;
     margin-bottom: 1rem;
     font-weight: 700;
 }
 
-.contenido-inicio p{
+.contenido-inicio p {
     font-size: 1.6rem;
 }
 
-.imagen-inicio{
+.imagen-inicio {
     border-radius: 50%;
 }
 
-.imagen-inicio img{
+.imagen-inicio img {
     position: relative;
     width: 32vw;
     border-radius: 50%;
@@ -131,12 +128,12 @@ span{
     transition: 0.2s linear;
 }
 
-.imagen-inicio img:hover{
+.imagen-inicio img:hover {
     font-size: 1.8rem;
     font-weight: 500;
 }
 
-.iconos-sociales a{
+.iconos-sociales a {
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -151,14 +148,14 @@ span{
     color: #6a92c2;
 }
 
-.iconos-sociales a:hover{
+.iconos-sociales a:hover {
     color: black;
     transform: scale(1.3) translateY(-5px);
     background-color: #6a92c2;
-    box-shadow: 0  0 25px #6a92c2;
+    box-shadow: 0 0 25px #6a92c2;
 }
 
-.btn{
+.btn {
     display: inline-block;
     padding: 1rem 2.8rem;
     background-color: black;
@@ -172,75 +169,71 @@ span{
     cursor: pointer;
 }
 
-.btn:hover{
+.btn:hover {
     transform: scale3d(1.03);
     background-color: #6a92c2;
     color: black;
     box-shadow: 0 0 25px #6a92c2;
 }
 
-.texto-escribiendo{
+.texto-escribiendo {
     font-size: 34px;
     font-weight: 600;
     min-width: 280px;
 }
 
-.texto-escribiendo span{
+.texto-escribiendo span {
     position: relative;
 }
 
-.texto-escribiendo span::before{
+.texto-escribiendo span::before {
     content: "software Developer";
     color: #6a92c2;
     animation: palabras 20s infinite;
 }
 
-.texto-escribiendo span::after{
+.texto-escribiendo span::after {
     content: "";
     background-color: black;
     position: absolute;
     width: calc(100% + 8px);
     height: 100%;
     border-left: 3px solid black;
-    right: -8;
+    right: -8px;
     animation: cursor 0.6s infinite;
 }
 
-@keyframes cursor{
-    to{
+@keyframes cursor {
+    to {
         border-left: 3px solid #6a92c2;
     }
 }
 
-@keyframes palabras{
-    0%, 20%{
+@keyframes palabras {
+    0%, 20% {
         content: "Desarrollador";
     }
-    21%, 40%{
+    21%, 40% {
         content: "Sociable";
     }
-    41%, 60%{
+    41%, 60% {
         content: "Creativo";
     }
-    61%, 80%{
+    61%, 80% {
         content: "Desarrollador Web";
     }
-    81%, 100%{
+    81%, 100% {
         content: "Innovador";
     }
 }
 
-
-/***************/
 /* HABILIDADES */
-/***************/
 
-.habilidades{
+.habilidades {
     margin-top: 5rem;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    flex-wrap: nowrap;
     gap: 8rem;
     background-color: black;
     min-height: 70vh;
@@ -260,83 +253,88 @@ span{
     width: 38%;
 }
 
-/****************/
-/*   PROYECTOS  */
-/****************/
+/* PROYECTOS */
 
-.proyectos {
-    padding: 5rem 9%;
-    background-color: black;
-    color: white;
-    text-align: center;
-}
-
-.grid-proyectos {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10rem;
-    justify-items: center;
+#bodyProyectos {
+    overflow-y: auto;
 }
 
 .proyecto {
     background-color: #161616;
     border-radius: 1rem;
-    width: 80%;
-    box-shadow: 0 0 25px #6a92c2;
+    box-shadow: 0 0 12px #6a92c2;
     text-align: center;
     transition: transform 0.3s ease;
-    cursor: pointer; 
+    cursor: pointer;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding-bottom: 2rem;
 }
 
 .proyecto:hover {
-    transform: scale(1.05);
-    transition: 0.6s;
+    transform: translateY(-10px);
+    box-shadow: 0 0 45px rgba(106, 146, 194, 0.5);
+}
+
+.grid-proyectos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 6rem;
+    justify-items: center;
+    padding-top: 2rem;
+    margin-top: 2rem;
 }
 
 .imagen-proyecto {
     width: 100%;
-    border-top-left-radius: 1rem;
-    border-top-right-radius: 1rem;
-    margin-bottom: 1rem;
-    height: 26rem;
-    overflow: hidden;
-    filter: brightness(0.8); /* Reduce el brillo al 80% */
-    transition: filter 0.6s ease; /* Suaviza el cambio de brillo */
+    height: 22rem;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .proyecto:hover .imagen-proyecto {
-    filter: brightness(1.2); /* Incrementa el brillo al pasar sobre el div del proyecto */
-}
-
-
-
-.imagen-proyecto::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.imagen-proyecto:hover::after {
-    opacity: 1;
+    transform: scale(1.05);
 }
 
 .titulo-proyecto {
-    font-size: 2rem;
+    font-size: 2.4rem;
     color: #6a92c2;
-    margin-bottom: 1rem;
+    margin: 1.5rem 0 1rem 0;
+    font-weight: 600;
+    text-shadow: 1px 1px 3px black;
 }
 
+.descripcion-proyecto {
+    font-size: 1.6rem;
+    color: #ccc;
+    margin: 0 2rem 1rem;
+    line-height: 1.5;
+}
 
-/****************/
+.tecnologias {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1rem;
+    font-size: 2.2rem;
+}
+
+.tecnologias i {
+    color: #6a92c2;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.tecnologias i:hover {
+    transform: scale(1.3);
+    color: white;
+}
+
 /* MEDIA QUERIES */
-/****************/
-
 
 @media (max-width: 768px) {
     .inicio {
@@ -393,71 +391,14 @@ span{
 
     .grid-proyectos {
         grid-template-columns: 1fr;
+        gap: 4rem;
     }
 
     .proyecto {
-        width: 90%;
-    }
-}
-
-
-@media (max-width: 480px) {
-    .inicio {
-        padding: 1rem;
-        gap: 2rem;
-    }
-
-    .contenido-inicio h1 {
-        font-size: 3.5rem;
-    }
-
-    .contenido-inicio h3 {
-        font-size: 2rem;
-    }
-
-    .contenido-inicio p {
-        font-size: 1.2rem;
-    }
-
-    .imagen-inicio img {
-        margin-top: -8rem;
-        width: 50vw;
-    }
-
-    .logo {
-        font-size: 2rem;
-        left: 5%;
-    }
-
-    nav {
-        width: 70%;
-        border-left: 2px solid #6a92c2;
-    }
-
-    nav a {
-        font-size: 1.4rem;
-    }
-
-    .btn {
-        font-size: 1.4rem;
-        padding: 0.8rem 2rem;
-    }
-
-    .habilidades {
-        flex-direction: column;
-        gap: 3rem;
+        width: 100%;
     }
 
     .habilidad {
         width: 80%;
-        font-size: 1.4rem;
-    }
-
-    .grid-proyectos {
-        grid-template-columns: 1fr;
-    }
-
-    .proyecto {
-        width: 90%;
     }
 }

@@ -3,6 +3,8 @@ window.addEventListener('load', () => {
     const bizum = document.getElementById('bizum');
     const reservaLibros = document.getElementById('reservaLibros');
     const guards = document.getElementById('guardsEVG');
+    const concesionario = document.getElementById('concesionario');
+    const taskManager = document.getElementById('taskManager');
 
     tresEnRaya.addEventListener('click', () => {
         window.location.href = 'https://github.com/zmartinl/3EnRaya';
@@ -18,5 +20,13 @@ window.addEventListener('load', () => {
 
     reservaLibros.addEventListener('click', () => {
         window.location.href = 'https://github.com/zmartinl/ZeusReservaLibros';
+    });
+
+    concesionario.addEventListener('click', () => {
+        window.location.href = 'https://github.com/zmartinl/DealerShip';
+    });
+
+    taskManager.addEventListener('click', () => {
+        window.location.href = '';
     });
 });
