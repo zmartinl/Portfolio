@@ -23,7 +23,7 @@ window.addEventListener('load', () => {
     });
 
     concesionario.addEventListener('click', () => {
-        window.location.href = 'https://github.com/zmartinl/DealerShip';
+        window.location.href = 'https://github.com/zmartinl/Concesionario';
     });
 
     taskManager.addEventListener('click', () => {
