@@ -27,6 +27,6 @@ window.addEventListener('load', () => {
     });
 
     taskManager.addEventListener('click', () => {
-        window.location.href = '';
+        window.location.href = 'https://github.com/zmartinl/TaskManager';
     });
 });
