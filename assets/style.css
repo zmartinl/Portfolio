@@ -194,12 +194,7 @@ span {
 
 .texto-escribiendo span::after {
     content: "";
-    background-color: black;
-    position: absolute;
-    width: calc(100% + 8px);
-    height: 100%;
     border-left: 3px solid black;
-    right: -8px;
     animation: cursor 0.6s infinite;
 }
 
@@ -211,7 +206,7 @@ span {
 
 @keyframes palabras {
     0%, 20% {
-        content: "Desarrollador";
+        content: "Desarrollador Laravel";
     }
     21%, 40% {
         content: "Sociable";
@@ -220,7 +215,7 @@ span {
         content: "Creativo";
     }
     61%, 80% {
-        content: "Desarrollador Web";
+        content: "Buen Team Leader";
     }
     81%, 100% {
         content: "Innovador";
@@ -228,6 +223,10 @@ span {
 }
 
 /* HABILIDADES */
+
+#bodyHabilidades {
+    overflow-y: auto;
+}
 
 .habilidades {
     margin-top: 5rem;
@@ -368,15 +367,11 @@ span {
         position: fixed;
         top: 0;
         right: 0;
-        width: 50%;
+        width: 40%;
         background-color: #161616;
         border-left: 2px solid #6a92c2;
         border-bottom-left-radius: 1.5rem;
         padding: 2rem;
-    }
-
-    nav.activo {
-        display: block;
     }
 
     nav a {
@@ -400,5 +395,86 @@ span {
 
     .habilidad {
         width: 80%;
+    }
+}
+
+.menu-btn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: black;
+    padding: 0.8rem 1rem;
+    border-radius: 50%;
+    font-size: 2.5rem;
+    color: #6a92c2;
+    cursor: pointer;
+    z-index: 1100;
+    box-shadow: 0 0 10px #6a92c2;
+    transition: background-color 0.3s ease;
+}
+
+.menu-btn:hover {
+    background-color: #6a92c2;
+    color: black;
+}
+
+@media (max-width: 768px) {
+    .menu-btn {
+        display: block;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #1e1e1e;
+        border-radius: 50%;
+        font-size: 2.5rem;
+        color: #6a92c2;
+        cursor: pointer;
+        z-index: 1100;
+        box-shadow: 0 0 15px rgba(106, 146, 194, 0.6);
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .menu-btn:hover {
+        background-color: #6a92c2;
+        color: #000;
+        transform: scale(1.1);
+    }
+
+    nav {
+        height: 100vh;
+        background: rgba(22, 22, 22, 0.95);
+        backdrop-filter: blur(1px);
+        border-left: 2px solid #6a92c2;
+        border-bottom-left-radius: 1.5rem;
+        padding: 4rem 2rem;
+        transform: translateX(100%);
+        transition: transform 0.4s ease;
+        display: flex;
+        z-index: 2;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.4);
+    }
+
+    nav.activo {
+        transform: translateX(0);
+        display: block;
+    }
+
+    nav a {
+        display: block;
+        width: 100%;
+        font-size: 1.8rem;
+        font-weight: 500;
+        color: white;
+        text-decoration: none;
+        border-bottom: 2px solid transparent;
+        padding-bottom: 0.3rem;
+    }
+
+    nav a:hover,
+    nav a.activo {
+        background-color: rgba(255, 255, 255, 0.05);
+        padding-left: 0.5rem;
+        border-radius: 0.5rem;
     }
 }

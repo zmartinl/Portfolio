@@ -1,112 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mis Proyectos</title>
-    <link rel="stylesheet" href="./assets/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <script src="assets/script.js" defer></script>
-</head>
-<body id="bodyProyectos">
-    <header>
-        <div class="logo">Proyectos</div>
-        <nav>
-            <a href="./index.html">Inicio</a>
-            <a href="./habilidades.html">Habilidades</a>
-            <a href="#" class="activo">Proyectos</a>
-        </nav>
-    </header>
-    
-    <section class="proyectos">
-        <div class="grid-proyectos">
-            <div class="proyecto" id="tresEnRaya">
-                <img src="./assets/img/3enraya.jpg" alt="3 en Raya" class="imagen-proyecto">
-                <h3 class="titulo-proyecto">3 en raya</h3>
-                <p class="descripcion-proyecto">Juego clásico implementado con Java y Java Swing.</p>
-                <div class="tecnologias">
-                    <i class="fab fa-java" title="Java"></i>
-                </div>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mis Proyectos</title>
+        <link rel="stylesheet" href="./assets/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <script src="assets/proyectos.js"></script>
+        <script src="./assets/menu.js"></script>
+    </head>
+    <body id="bodyProyectos">
+        <header>
+            <div class="logo">Proyectos</div>
+            <nav>
+                <a href="./index.html">Inicio</a>
+                <a href="./habilidades.html">Habilidades</a>
+                <a href="#" class="activo">Proyectos</a>
+            </nav>
+            <div id="menu-btn" class="menu-btn">
+                <i class="fas fa-bars"></i>
             </div>
+        </header>
+        
+        <section class="proyectos">
+            <div class="grid-proyectos">
+                <div class="proyecto" id="tresEnRaya">
+                    <img src="./assets/img/3enraya.jpg" alt="3 en Raya" class="imagen-proyecto">
+                    <h3 class="titulo-proyecto">3 en raya</h3>
+                    <p class="descripcion-proyecto">Juego clásico implementado con Java y Java Swing.</p>
+                    <div class="tecnologias">
+                        <i class="fab fa-java" title="Java"></i>
+                    </div>
+                </div>
 
-            <div class="proyecto" id="bizum">
-                <img src="./assets/img/bizum.jpg" alt="Bizums" class="imagen-proyecto">
-                <h3 class="titulo-proyecto">Bizum</h3>
-                <p class="descripcion-proyecto">Simulación de pagos móviles entre usuarios, con interfaz intuitiva.</p>
-                <div class="tecnologias">
-                    <i class="fab fa-java" title="Java"></i>
-                    <i class="fas fa-database" title="Base de datos"></i>
+                <div class="proyecto" id="bizum">
+                    <img src="./assets/img/bizum.jpg" alt="Bizums" class="imagen-proyecto">
+                    <h3 class="titulo-proyecto">Bizum</h3>
+                    <p class="descripcion-proyecto">Simulación de pagos móviles entre usuarios, con interfaz intuitiva.</p>
+                    <div class="tecnologias">
+                        <i class="fab fa-java" title="Java"></i>
+                        <i class="fas fa-database" title="Base de datos"></i>
+                    </div>
                 </div>
-            </div>
-            <div class="proyecto" id="reservaLibros">
-                <img src="./assets/img/reservaLibros.jpg" alt="ReservasLibros" class="imagen-proyecto">
-                <h3 class="titulo-proyecto">Reserva Libros</h3>
-                <p class="descripcion-proyecto">Aplicación para gestionar la reserva y préstamo de libros en una biblioteca.</p>
-                <div class="tecnologias">
-                    <i class="fab fa-php" title="PhP"></i>
-                    <i class="fas fa-database" title="Base de datos"></i>
+                <div class="proyecto" id="reservaLibros">
+                    <img src="./assets/img/reservaLibros.jpg" alt="ReservasLibros" class="imagen-proyecto">
+                    <h3 class="titulo-proyecto">Reserva Libros</h3>
+                    <p class="descripcion-proyecto">Aplicación para gestionar la reserva y préstamo de libros en una biblioteca.</p>
+                    <div class="tecnologias">
+                        <i class="fab fa-php" title="PhP"></i>
+                        <i class="fas fa-database" title="Base de datos"></i>
+                    </div>
                 </div>
-            </div>
-            <div class="proyecto" id="guardsEVG">
-                <img src="./assets/img/guards.png" alt="GuardsEVG" class="imagen-proyecto">
-                <h3 class="titulo-proyecto">Gestor de Guardias</h3>
-                <p class="descripcion-proyecto">Herramienta para organizar y asignar guardias de profesores en centros educativos.</p>
-                <div class="tecnologias">
-                    <i class="fab fa-laravel" title="Laravel"></i>
-                    <i class="fab fa-php" title="PhP"></i>
-                    <i class="fab fa-bootstrap" title="Bootstrap"></i>
-                    <i class="fab fa-js" title="JavaScript"></i>
-                    <i class="fab fa-git-alt" title="Git"></i>
-                    <i class="fab fa-github" title="GitHub"></i>
-                    <i class="fas fa-database" title="Base de datos"></i>
+                <div class="proyecto" id="guardsEVG">
+                    <img src="./assets/img/guards.png" alt="GuardsEVG" class="imagen-proyecto">
+                    <h3 class="titulo-proyecto">Gestor de Guardias</h3>
+                    <p class="descripcion-proyecto">Herramienta para organizar y asignar guardias de profesores en centros educativos.</p>
+                    <div class="tecnologias">
+                        <i class="fab fa-laravel" title="Laravel"></i>
+                        <i class="fab fa-php" title="PhP"></i>
+                        <i class="fab fa-bootstrap" title="Bootstrap"></i>
+                        <i class="fab fa-js" title="JavaScript"></i>
+                        <i class="fab fa-git-alt" title="Git"></i>
+                        <i class="fab fa-github" title="GitHub"></i>
+                        <i class="fas fa-database" title="Base de datos"></i>
+                    </div>
                 </div>
-            </div>
 
-            <div class="proyecto" id="concesionario">
-                <img src="./assets/img/concesionario.png" alt="Concesionario" class="imagen-proyecto">
-                <h3 class="titulo-proyecto">Concesionario</h3>
-                <p class="descripcion-proyecto">Aplicación para gestionar un concesionario de vehículos, incluyendo ventas y stock.</p>
-                <div class="tecnologias">
-                    <i class="fab fa-laravel" title="Laravel"></i>
-                    <i class="fab fa-php" title="PhP"></i>
-                    <i class="fab fa-bootstrap" title="Bootstrap"></i>
-                    <i class="fab fa-js" title="JavaScript"></i>
-                    <i class="fab fa-git-alt" title="Git"></i>
-                    <i class="fab fa-github" title="GitHub"></i>
-                    <i class="fas fa-database" title="Base de datos"></i>
+                <div class="proyecto" id="concesionario">
+                    <img src="./assets/img/concesionario.png" alt="Concesionario" class="imagen-proyecto">
+                    <h3 class="titulo-proyecto">Concesionario</h3>
+                    <p class="descripcion-proyecto">Aplicación para gestionar un concesionario de vehículos, incluyendo ventas y stock.</p>
+                    <div class="tecnologias">
+                        <i class="fab fa-laravel" title="Laravel"></i>
+                        <i class="fab fa-php" title="PhP"></i>
+                        <i class="fab fa-bootstrap" title="Bootstrap"></i>
+                        <i class="fab fa-js" title="JavaScript"></i>
+                        <i class="fab fa-git-alt" title="Git"></i>
+                        <i class="fab fa-github" title="GitHub"></i>
+                        <i class="fas fa-database" title="Base de datos"></i>
+                    </div>
                 </div>
-            </div>
 
-            <div class="proyecto" id="taskManager">
-                <img src="./assets/img/taskManager.png" alt="TaskManager" class="imagen-proyecto">
-                <h3 class="titulo-proyecto">TaskManager</h3>
-                <p class="descripcion-proyecto">Aplicación web para la gestión de tareas y proyectos, con seguimiento de progreso.</p>
-                <div class="tecnologias">
-                    <i class="fab fa-laravel" title="Laravel"></i>
-                    <i class="fab fa-php" title="PhP"></i>
-                    <i class="fab fa-bootstrap" title="Bootstrap"></i>
-                    <i class="fab fa-js" title="JavaScript"></i>
-                    <i class="fab fa-git-alt" title="Git"></i>
-                    <i class="fab fa-github" title="GitHub"></i>
-                    <i class="fas fa-database" title="Base de datos"></i>
+                <div class="proyecto" id="taskManager">
+                    <img src="./assets/img/taskManager.png" alt="TaskManager" class="imagen-proyecto">
+                    <h3 class="titulo-proyecto">TaskManager</h3>
+                    <p class="descripcion-proyecto">Aplicación web para la gestión de tareas y proyectos, con seguimiento de progreso.</p>
+                    <div class="tecnologias">
+                        <i class="fab fa-laravel" title="Laravel"></i>
+                        <i class="fab fa-php" title="PhP"></i>
+                        <i class="fab fa-bootstrap" title="Bootstrap"></i>
+                        <i class="fab fa-js" title="JavaScript"></i>
+                        <i class="fab fa-git-alt" title="Git"></i>
+                        <i class="fab fa-github" title="GitHub"></i>
+                        <i class="fas fa-database" title="Base de datos"></i>
+                    </div>
                 </div>
-            </div>
 
-            <div class="proyecto" id="Gestor de Cursos">
-                <img src="./assets/img/courses.png" alt="courses" class="imagen-proyecto">
-                <h3 class="titulo-proyecto">Gestor de Cursos</h3>
-                <p class="descripcion-proyecto">Gestor de cursos y acciones formaticas para los trabajadores de THB Hotels</p>
-                <div class="tecnologias">
-                    <i class="fab fa-laravel" title="Laravel"></i>
-                    <i class="fab fa-php" title="PhP"></i>
-                    <i class="fab fa-bootstrap" title="Bootstrap"></i>
-                    <i class="fab fa-js" title="JavaScript"></i>
-                    <i class="fab fa-git-alt" title="Git"></i>
-                    <i class="fab fa-github" title="GitHub"></i>
-                    <i class="fas fa-database" title="Base de datos"></i>
+                <div class="proyecto" id="Gestor de Cursos">
+                    <img src="./assets/img/courses.png" alt="courses" class="imagen-proyecto">
+                    <h3 class="titulo-proyecto">Gestor de Cursos</h3>
+                    <p class="descripcion-proyecto">Gestor de cursos y acciones formaticas para los trabajadores de THB Hotels</p>
+                    <div class="tecnologias">
+                        <i class="fab fa-laravel" title="Laravel"></i>
+                        <i class="fab fa-php" title="PhP"></i>
+                        <i class="fab fa-bootstrap" title="Bootstrap"></i>
+                        <i class="fab fa-js" title="JavaScript"></i>
+                        <i class="fab fa-git-alt" title="Git"></i>
+                        <i class="fab fa-github" title="GitHub"></i>
+                        <i class="fas fa-database" title="Base de datos"></i>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-</body>
+        </section>
+    </body>
 </html>
