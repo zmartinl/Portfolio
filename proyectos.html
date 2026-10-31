@@ -1,116 +1,344 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Mis Proyectos</title>
-        <link rel="stylesheet" href="./assets/style.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-        <script src="assets/proyectos.js"></script>
-        <script src="./assets/menu.js"></script>
-    </head>
-    <body id="bodyProyectos">
-        <header>
-            <div class="logo">Proyectos</div>
-            <nav>
-                <a href="./index.html">Inicio</a>
-                <a href="./habilidades.html">Habilidades</a>
-                <a href="#" class="activo">Proyectos</a>
-            </nav>
-            <div id="menu-btn" class="menu-btn">
-                <i class="fas fa-bars"></i>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyectos | Zeus Martín Llera</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="./assets/style.css?v=6">
+    <link rel="prefetch" href="./index.html">
+    <link rel="prefetch" href="./habilidades.html">
+</head>
+<body class="page">
+    <div class="spatial-shell">
+        <header class="spatial-topbar">
+            <div class="spatial-topbar__left">
+                <a href="./index.html" class="icon-circle" aria-label="Inicio">
+                    <i class="fa-solid fa-code"></i>
+                </a>
+                <a href="./habilidades.html" class="icon-circle" aria-label="Volver a Habilidades">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </a>
+                <a href="./index.html" class="icon-circle" aria-label="Ir a Inicio">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </a>
+                <a href="./index.html" class="icon-circle" aria-label="Portada">
+                    <i class="fa-solid fa-house"></i>
+                </a>
+                <div class="spatial-searchbar">
+                    <i class="fa-solid fa-folder-open"></i>
+                    <span>Mis Proyectos Públicos &amp; Desarrollos Privados de Empresa</span>
+                </div>
+            </div>
+
+            <div class="spatial-topbar__right">
+                <a href="https://github.com/zmartinl" target="_blank" rel="noopener noreferrer" class="icon-circle" aria-label="GitHub">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/zeus-martin-llera-a64355247/" target="_blank" rel="noopener noreferrer" class="icon-circle" aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a href="https://www.instagram.com/zeusmartin__/" target="_blank" rel="noopener noreferrer" class="icon-circle" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="./assets/CV.pdf" download="CV_Zeus_Martin.pdf" class="profile-pill">
+                    <img src="./assets/img/yo-web.jpg" alt="Zeus Martín" class="profile-pill__avatar" decoding="async">
+                    <span>Zeus Martín</span>
+                    <i class="fa-solid fa-arrow-down"></i>
+                </a>
             </div>
         </header>
-        
-        <section class="proyectos">
-            <div class="grid-proyectos">
-                <div class="proyecto" id="tresEnRaya">
-                    <img src="./assets/img/3enraya.jpg" alt="3 en Raya" class="imagen-proyecto">
-                    <h3 class="titulo-proyecto">3 en raya</h3>
-                    <p class="descripcion-proyecto">Juego clásico implementado con Java y Java Swing.</p>
-                    <div class="tecnologias">
-                        <i class="fab fa-java" title="Java"></i>
-                    </div>
-                </div>
 
-                <div class="proyecto" id="bizum">
-                    <img src="./assets/img/bizum.jpg" alt="Bizums" class="imagen-proyecto">
-                    <h3 class="titulo-proyecto">Bizum</h3>
-                    <p class="descripcion-proyecto">Simulación de pagos móviles entre usuarios, con interfaz intuitiva.</p>
-                    <div class="tecnologias">
-                        <i class="fab fa-java" title="Java"></i>
-                        <i class="fas fa-database" title="Base de datos"></i>
+        <main class="spatial-workspace">
+            <aside class="spatial-col spatial-col--left">
+                <section class="glass-panel">
+                    <div class="panel-header">
+                        <div class="panel-header__titles">
+                            <h2 class="panel-header__title">Confidencialidad</h2>
+                            <span class="panel-header__subtitle">Empresa</span>
+                        </div>
+                        <i class="fa-solid fa-lock"></i>
                     </div>
-                </div>
-                <div class="proyecto" id="reservaLibros">
-                    <img src="./assets/img/reservaLibros.jpg" alt="ReservasLibros" class="imagen-proyecto">
-                    <h3 class="titulo-proyecto">Reserva Libros</h3>
-                    <p class="descripcion-proyecto">Aplicación para gestionar la reserva y préstamo de libros en una biblioteca.</p>
-                    <div class="tecnologias">
-                        <i class="fab fa-php" title="PhP"></i>
-                        <i class="fas fa-database" title="Base de datos"></i>
-                    </div>
-                </div>
-                <div class="proyecto" id="guardsEVG">
-                    <img src="./assets/img/guards.png" alt="GuardsEVG" class="imagen-proyecto">
-                    <h3 class="titulo-proyecto">Gestor de Guardias</h3>
-                    <p class="descripcion-proyecto">Herramienta para organizar y asignar guardias de profesores en centros educativos.</p>
-                    <div class="tecnologias">
-                        <i class="fab fa-laravel" title="Laravel"></i>
-                        <i class="fab fa-php" title="PhP"></i>
-                        <i class="fab fa-bootstrap" title="Bootstrap"></i>
-                        <i class="fab fa-js" title="JavaScript"></i>
-                        <i class="fab fa-git-alt" title="Git"></i>
-                        <i class="fab fa-github" title="GitHub"></i>
-                        <i class="fas fa-database" title="Base de datos"></i>
-                    </div>
-                </div>
 
-                <div class="proyecto" id="concesionario">
-                    <img src="./assets/img/concesionario.png" alt="Concesionario" class="imagen-proyecto">
-                    <h3 class="titulo-proyecto">Concesionario</h3>
-                    <p class="descripcion-proyecto">Aplicación para gestionar un concesionario de vehículos, incluyendo ventas y stock.</p>
-                    <div class="tecnologias">
-                        <i class="fab fa-laravel" title="Laravel"></i>
-                        <i class="fab fa-php" title="PhP"></i>
-                        <i class="fab fa-bootstrap" title="Bootstrap"></i>
-                        <i class="fab fa-js" title="JavaScript"></i>
-                        <i class="fab fa-git-alt" title="Git"></i>
-                        <i class="fab fa-github" title="GitHub"></i>
-                        <i class="fas fa-database" title="Base de datos"></i>
+                    <div class="feature-banner-card">
+                        <div>
+                            <span class="feature-banner-card__eyebrow">Software Corporativo</span>
+                            <h3 class="feature-banner-card__title">+ Muchos Más Proyectos Privados</h3>
+                            <p class="feature-banner-card__desc">
+                                Además de los repositorios públicos de esta página, he realizado muchos más proyectos completos para mi empresa aplicando principios SOLID y diseño por arquitectura escalable. Al ser privados de la empresa, no puedo publicarlos.
+                            </p>
+                        </div>
+                        <div class="feature-banner-card__footer">
+                            <span class="panel-header__subtitle">THB Hotels</span>
+                            <span class="glass-pill-btn glass-pill-btn--active">Privado</span>
+                        </div>
                     </div>
-                </div>
+                </section>
 
-                <div class="proyecto" id="taskManager">
-                    <img src="./assets/img/taskManager.png" alt="TaskManager" class="imagen-proyecto">
-                    <h3 class="titulo-proyecto">TaskManager</h3>
-                    <p class="descripcion-proyecto">Aplicación web para la gestión de tareas y proyectos, con seguimiento de progreso.</p>
-                    <div class="tecnologias">
-                        <i class="fab fa-laravel" title="Laravel"></i>
-                        <i class="fab fa-php" title="PhP"></i>
-                        <i class="fab fa-bootstrap" title="Bootstrap"></i>
-                        <i class="fab fa-js" title="JavaScript"></i>
-                        <i class="fab fa-git-alt" title="Git"></i>
-                        <i class="fab fa-github" title="GitHub"></i>
-                        <i class="fas fa-database" title="Base de datos"></i>
+                <section class="glass-panel">
+                    <div class="panel-header">
+                        <h3 class="panel-header__title">Filtrar por Stack</h3>
                     </div>
-                </div>
+                    <div class="pill-group" data-filter-group>
+                        <button type="button" class="glass-pill-btn glass-pill-btn--active" data-filter="all">Todos</button>
+                        <button type="button" class="glass-pill-btn" data-filter="laravel">Laravel</button>
+                        <button type="button" class="glass-pill-btn" data-filter="php-java">PHP &amp; Java</button>
+                    </div>
+                </section>
+            </aside>
 
-                <div class="proyecto" id="Gestor de Cursos">
-                    <img src="./assets/img/cursos.jpg" alt="courses" class="imagen-proyecto">
-                    <h3 class="titulo-proyecto">Gestor de Cursos</h3>
-                    <p class="descripcion-proyecto">Gestor de cursos y acciones formaticas para los trabajadores de THB Hotels</p>
-                    <div class="tecnologias">
-                        <i class="fab fa-laravel" title="Laravel"></i>
-                        <i class="fab fa-php" title="PhP"></i>
-                        <i class="fab fa-bootstrap" title="Bootstrap"></i>
-                        <i class="fab fa-js" title="JavaScript"></i>
-                        <i class="fab fa-git-alt" title="Git"></i>
-                        <i class="fab fa-github" title="GitHub"></i>
-                        <i class="fas fa-database" title="Base de datos"></i>
+            <section class="spatial-col spatial-col--center">
+                <div class="glass-panel glass-panel--grow">
+                    <div class="panel-header">
+                        <div class="panel-header__titles">
+                            <h1 class="panel-header__title">Repositorios Públicos (Se abren en nueva pestaña)</h1>
+                        </div>
+                        <nav class="pill-group" aria-label="Navegación principal">
+                            <a href="./index.html" class="glass-pill-btn">Inicio</a>
+                            <a href="./habilidades.html" class="glass-pill-btn">Habilidades</a>
+                            <a href="./proyectos.html" class="glass-pill-btn glass-pill-btn--active">Proyectos</a>
+                        </nav>
+                    </div>
+
+                    <div class="album-grid album-grid--full">
+                        <article class="album-card" id="guardsEVG" data-category="laravel" data-project-url="https://github.com/jcarrozadev/tfc_evg">
+                            <div class="album-card__media">
+                                <img src="./assets/img/guards-web.jpg" alt="Gestor de Guardias" class="album-card__img" decoding="async">
+                                <span class="album-card__tag">Laravel</span>
+                            </div>
+                            <h3 class="album-card__title">Gestor de Guardias</h3>
+                            <p class="album-card__desc">Herramienta para organizar y asignar guardias de profesores en centros educativos.</p>
+                            <div class="album-card__footer">
+                                <div class="album-card__tech">
+                                    <i class="fab fa-laravel" title="Laravel"></i>
+                                    <i class="fab fa-php" title="PHP"></i>
+                                    <i class="fab fa-bootstrap" title="Bootstrap"></i>
+                                    <i class="fab fa-js" title="JavaScript"></i>
+                                    <i class="fas fa-database" title="Base de datos"></i>
+                                </div>
+                                <a href="https://github.com/jcarrozadev/tfc_evg" target="_blank" rel="noopener noreferrer" class="album-card__open">
+                                    <span>Nueva pestaña</span>
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </a>
+                            </div>
+                        </article>
+
+                        <article class="album-card" id="taskManager" data-category="laravel" data-project-url="https://github.com/zmartinl/TaskManager">
+                            <div class="album-card__media">
+                                <img src="./assets/img/taskManager-web.jpg" alt="TaskManager" class="album-card__img" decoding="async">
+                                <span class="album-card__tag">Laravel</span>
+                            </div>
+                            <h3 class="album-card__title">TaskManager</h3>
+                            <p class="album-card__desc">Aplicación web para la gestión de tareas y proyectos, con seguimiento de progreso.</p>
+                            <div class="album-card__footer">
+                                <div class="album-card__tech">
+                                    <i class="fab fa-laravel" title="Laravel"></i>
+                                    <i class="fab fa-php" title="PHP"></i>
+                                    <i class="fab fa-bootstrap" title="Bootstrap"></i>
+                                    <i class="fab fa-js" title="JavaScript"></i>
+                                    <i class="fas fa-database" title="Base de datos"></i>
+                                </div>
+                                <a href="https://github.com/zmartinl/TaskManager" target="_blank" rel="noopener noreferrer" class="album-card__open">
+                                    <span>Nueva pestaña</span>
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </a>
+                            </div>
+                        </article>
+
+                        <article class="album-card" id="concesionario" data-category="laravel" data-project-url="https://github.com/zmartinl/Concesionario">
+                            <div class="album-card__media">
+                                <img src="./assets/img/concesionario-web.jpg" alt="Concesionario" class="album-card__img" decoding="async">
+                                <span class="album-card__tag">Laravel</span>
+                            </div>
+                            <h3 class="album-card__title">Concesionario</h3>
+                            <p class="album-card__desc">Aplicación para gestionar un concesionario de vehículos, incluyendo ventas y stock.</p>
+                            <div class="album-card__footer">
+                                <div class="album-card__tech">
+                                    <i class="fab fa-laravel" title="Laravel"></i>
+                                    <i class="fab fa-php" title="PHP"></i>
+                                    <i class="fab fa-bootstrap" title="Bootstrap"></i>
+                                    <i class="fab fa-js" title="JavaScript"></i>
+                                    <i class="fas fa-database" title="Base de datos"></i>
+                                </div>
+                                <a href="https://github.com/zmartinl/Concesionario" target="_blank" rel="noopener noreferrer" class="album-card__open">
+                                    <span>Nueva pestaña</span>
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </a>
+                            </div>
+                        </article>
+
+                        <article class="album-card" id="reservaLibros" data-category="php-java" data-project-url="https://github.com/zmartinl/ZeusReservaLibros">
+                            <div class="album-card__media">
+                                <img src="./assets/img/reservaLibros.jpg" alt="Reserva Libros" class="album-card__img" decoding="async">
+                                <span class="album-card__tag">PHP</span>
+                            </div>
+                            <h3 class="album-card__title">Reserva Libros</h3>
+                            <p class="album-card__desc">Aplicación para gestionar la reserva y préstamo de libros en una biblioteca.</p>
+                            <div class="album-card__footer">
+                                <div class="album-card__tech">
+                                    <i class="fab fa-php" title="PHP"></i>
+                                    <i class="fas fa-database" title="Base de datos"></i>
+                                </div>
+                                <a href="https://github.com/zmartinl/ZeusReservaLibros" target="_blank" rel="noopener noreferrer" class="album-card__open">
+                                    <span>Nueva pestaña</span>
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </a>
+                            </div>
+                        </article>
+
+                        <article class="album-card" id="bizum" data-category="php-java" data-project-url="https://github.com/zmartinl/Bizum">
+                            <div class="album-card__media">
+                                <img src="./assets/img/bizum.jpg" alt="Bizum" class="album-card__img" decoding="async">
+                                <span class="album-card__tag">Java</span>
+                            </div>
+                            <h3 class="album-card__title">Bizum</h3>
+                            <p class="album-card__desc">Simulación de pagos móviles entre usuarios, con interfaz intuitiva.</p>
+                            <div class="album-card__footer">
+                                <div class="album-card__tech">
+                                    <i class="fab fa-java" title="Java"></i>
+                                    <i class="fas fa-database" title="Base de datos"></i>
+                                </div>
+                                <a href="https://github.com/zmartinl/Bizum" target="_blank" rel="noopener noreferrer" class="album-card__open">
+                                    <span>Nueva pestaña</span>
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </a>
+                            </div>
+                        </article>
+
+                        <article class="album-card" id="tresEnRaya" data-category="php-java" data-project-url="https://github.com/zmartinl/3EnRaya">
+                            <div class="album-card__media">
+                                <img src="./assets/img/3enraya.jpg" alt="3 en Raya" class="album-card__img" decoding="async">
+                                <span class="album-card__tag">Java</span>
+                            </div>
+                            <h3 class="album-card__title">3 en raya</h3>
+                            <p class="album-card__desc">Juego clásico implementado con Java y Java Swing.</p>
+                            <div class="album-card__footer">
+                                <div class="album-card__tech">
+                                    <i class="fab fa-java" title="Java"></i>
+                                </div>
+                                <a href="https://github.com/zmartinl/3EnRaya" target="_blank" rel="noopener noreferrer" class="album-card__open">
+                                    <span>Nueva pestaña</span>
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </a>
+                            </div>
+                        </article>
                     </div>
                 </div>
+            </section>
+
+            <aside class="spatial-col spatial-col--right">
+                <section class="glass-panel glass-panel--grow">
+                    <div class="panel-header">
+                        <div>
+                            <h2 class="panel-header__title">Acceso Rápido</h2>
+                            <p class="panel-header__subtitle">Repositorios en GitHub</p>
+                        </div>
+                        <a href="https://github.com/zmartinl" target="_blank" rel="noopener noreferrer" class="icon-circle" aria-label="Perfil de GitHub">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                    </div>
+
+                    <div class="library-list">
+                        <a href="https://github.com/jcarrozadev/tfc_evg" target="_blank" rel="noopener noreferrer" class="library-item">
+                            <div class="library-item__icon">
+                                <i class="fab fa-laravel"></i>
+                            </div>
+                            <div class="library-item__body">
+                                <h3 class="library-item__title">Gestor de Guardias</h3>
+                                <p class="library-item__meta">Laravel · TFG</p>
+                            </div>
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+
+                        <a href="https://github.com/zmartinl/TaskManager" target="_blank" rel="noopener noreferrer" class="library-item">
+                            <div class="library-item__icon">
+                                <i class="fab fa-laravel"></i>
+                            </div>
+                            <div class="library-item__body">
+                                <h3 class="library-item__title">TaskManager</h3>
+                                <p class="library-item__meta">Laravel · Full-Stack</p>
+                            </div>
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+
+                        <a href="https://github.com/zmartinl/Concesionario" target="_blank" rel="noopener noreferrer" class="library-item">
+                            <div class="library-item__icon">
+                                <i class="fab fa-laravel"></i>
+                            </div>
+                            <div class="library-item__body">
+                                <h3 class="library-item__title">Concesionario</h3>
+                                <p class="library-item__meta">Laravel · Gestión</p>
+                            </div>
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+
+                        <a href="https://github.com/zmartinl/ZeusReservaLibros" target="_blank" rel="noopener noreferrer" class="library-item">
+                            <div class="library-item__icon">
+                                <i class="fab fa-php"></i>
+                            </div>
+                            <div class="library-item__body">
+                                <h3 class="library-item__title">Reserva Libros</h3>
+                                <p class="library-item__meta">PHP · MySQL</p>
+                            </div>
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+
+                        <a href="https://github.com/zmartinl/Bizum" target="_blank" rel="noopener noreferrer" class="library-item">
+                            <div class="library-item__icon">
+                                <i class="fab fa-java"></i>
+                            </div>
+                            <div class="library-item__body">
+                                <h3 class="library-item__title">Bizum</h3>
+                                <p class="library-item__meta">Java · SQL</p>
+                            </div>
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+
+                        <a href="https://github.com/zmartinl/3EnRaya" target="_blank" rel="noopener noreferrer" class="library-item">
+                            <div class="library-item__icon">
+                                <i class="fab fa-java"></i>
+                            </div>
+                            <div class="library-item__body">
+                                <h3 class="library-item__title">3 en raya</h3>
+                                <p class="library-item__meta">Java · Swing</p>
+                            </div>
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </section>
+            </aside>
+        </main>
+
+        <footer class="spatial-dock">
+            <div class="spatial-dock__left">
+                <a href="./index.html" class="icon-circle" aria-label="Inicio">
+                    <i class="fa-solid fa-house"></i>
+                </a>
+                <a href="./habilidades.html" class="icon-circle" aria-label="Habilidades">
+                    <i class="fa-solid fa-layer-group"></i>
+                </a>
+                <a href="./proyectos.html" class="icon-circle icon-circle--active" aria-label="Proyectos">
+                    <i class="fa-solid fa-folder-open"></i>
+                </a>
             </div>
-        </section>
-    </body>
+
+            <div class="spatial-dock__bar">
+                <span>6 Públicos</span>
+                <div class="spatial-dock__track">
+                    <div class="spatial-dock__fill"></div>
+                </div>
+                <span>+ Privados de Empresa</span>
+            </div>
+
+            <div class="spatial-dock__right">
+                <a href="https://github.com/zmartinl" target="_blank" rel="noopener noreferrer" class="glass-pill-btn glass-pill-btn--active">
+                    <i class="fa-brands fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+            </div>
+        </footer>
+    </div>
+
+    <script src="./assets/proyectos.js?v=6"></script>
+</body>
 </html>

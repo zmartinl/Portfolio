@@ -1,49 +1,44 @@
-window.addEventListener('load', () => {
-    const tresEnRaya = document.getElementById('tresEnRaya');
-    const bizum = document.getElementById('bizum');
-    const reservaLibros = document.getElementById('reservaLibros');
-    const guards = document.getElementById('guardsEVG');
-    const concesionario = document.getElementById('concesionario');
-    const taskManager = document.getElementById('taskManager');
-    const menuBtn = document.getElementById('menu-btn');
-    const nav = document.querySelector('header nav');
+class ProjectsShowcase {
+    constructor() {
+        this.cards = document.querySelectorAll('[data-project-url]');
+        this.filterButtons = document.querySelectorAll('[data-filter]');
 
+        this.bindProjectCards();
+        this.bindFilters();
+    }
 
-    tresEnRaya.addEventListener('click', () => {
-        window.location.href = 'https://github.com/zmartinl/3EnRaya';
-    });
+    bindProjectCards() {
+        this.cards.forEach((card) => {
+            card.addEventListener('click', (event) => {
+                const clickedAnchor = event.target.closest('a');
+                const projectUrl = card.getAttribute('data-project-url');
 
-    bizum.addEventListener('click', () => {
-        window.location.href = 'https://github.com/zmartinl/Bizum';
-    });
-
-    guards.addEventListener('click', () => {
-        window.location.href = 'https://github.com/jcarrozadev/tfc_evg';
-    });
-
-    reservaLibros.addEventListener('click', () => {
-        window.location.href = 'https://github.com/zmartinl/ZeusReservaLibros';
-    });
-
-    concesionario.addEventListener('click', () => {
-        window.location.href = 'https://github.com/zmartinl/Concesionario';
-    });
-
-    taskManager.addEventListener('click', () => {
-        window.location.href = 'https://github.com/zmartinl/TaskManager';
-    });
-
-    if (menuBtn && nav) {
-        menuBtn.addEventListener('click', () => {
-            console.log('Menu button clicked');
-            
-            nav.classList.toggle('activo');
-        });
-
-        nav.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                nav.classList.remove('activo');
+                if (!clickedAnchor && projectUrl) {
+                    window.open(projectUrl, '_blank', 'noopener,noreferrer');
+                }
             });
         });
     }
+
+    bindFilters() {
+        this.filterButtons.forEach((button) => {
+            button.addEventListener('click', () => {
+                const selectedCategory = button.getAttribute('data-filter');
+
+                this.filterButtons.forEach((btn) => {
+                    btn.classList.toggle('glass-pill-btn--active', btn === button);
+                });
+
+                this.cards.forEach((card) => {
+                    const cardCategory = card.getAttribute('data-category');
+                    const shouldShow = selectedCategory === 'all' || cardCategory === selectedCategory;
+                    card.classList.toggle('album-card--hidden', !shouldShow);
+                });
+            });
+        });
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    new ProjectsShowcase();
 });

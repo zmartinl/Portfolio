@@ -1,44 +1,400 @@
 <!DOCTYPE html>
 <html lang="es">
-    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zeus Martín Llera | Software Developer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="./assets/style.css">
-    <title>Portfolio Zeus</title>
+    <link rel="stylesheet" href="./assets/style.css?v=6">
+    <link rel="prefetch" href="./habilidades.html">
+    <link rel="prefetch" href="./proyectos.html">
 </head>
-<body>
-    <header>
-        <a href="#" class="logo">Software Developer</a>
-        <nav>
-            <a href="#" class="activo">Inicio</a>
-            <a href="./habilidades.html">Habilidades</a>
-            <a href="./proyectos.html">Proyectos</a>
-        </nav>
-        <div id="menu-btn" class="menu-btn">
-            <i class="fas fa-bars"></i>
-        </div>
-    </header>
-    <section class="inicio">
-        <div class="imagen-inicio">
-            <img src="assets/img/yo.jpg" alt="Imagen de Zeus">
-        </div>
-        <div class="contenido-inicio">
-            <h1>Hola, soy <span>Zeus</span></h1>
-            <h3 class="texto-escribiendo">Soy <span></span></h3>
-
-            <p>
-                Me encanta programar y aprender cosas nuevas. Soy un apasionado de la tecnología y me gusta estar al día de las últimas tendencias. Me encanta trabajar en equipo y aportar mi granito de arena en cada proyecto.
-            </p>
-            <div class="iconos-sociales">
-                <a href="https://www.linkedin.com/in/zeus-martin-llera-a64355247/"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="https://github.com/zmartinl"><i class="fa-brands fa-github"></i></a>
-                <a href="https://www.instagram.com/zeusmartin__/"><i class="fa-brands fa-instagram"></i></a>
+<body class="page">
+    <div class="spatial-shell">
+        <header class="spatial-topbar">
+            <div class="spatial-topbar__left">
+                <a href="./index.html" class="icon-circle icon-circle--active" aria-label="Inicio">
+                    <i class="fa-solid fa-code"></i>
+                </a>
+                <a href="./habilidades.html" class="icon-circle" aria-label="Habilidades">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </a>
+                <a href="./proyectos.html" class="icon-circle" aria-label="Proyectos">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </a>
+                <a href="./index.html" class="icon-circle" aria-label="Portada">
+                    <i class="fa-solid fa-house"></i>
+                </a>
+                <div class="spatial-searchbar">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <span>Zeus Martín Llera · Software Developer — Principios SOLID &amp; Arquitectura Escalable</span>
+                </div>
             </div>
-            <a href="./assets/CV.pdf" download="CV.pdf" class="btn">Curriculum</a>
-        </div>
-    </section>
-    <script src="./assets/menu.js"></script>
+
+            <div class="spatial-topbar__right">
+                <a href="https://github.com/zmartinl" target="_blank" rel="noopener noreferrer" class="icon-circle" aria-label="GitHub">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/zeus-martin-llera-a64355247/" target="_blank" rel="noopener noreferrer" class="icon-circle" aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a href="https://www.instagram.com/zeusmartin__/" target="_blank" rel="noopener noreferrer" class="icon-circle" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="./assets/CV.pdf" download="CV_Zeus_Martin.pdf" class="profile-pill">
+                    <img src="./assets/img/yo-web.jpg" alt="Zeus Martín" class="profile-pill__avatar" decoding="async">
+                    <span>Zeus Martín</span>
+                    <i class="fa-solid fa-arrow-down"></i>
+                </a>
+            </div>
+        </header>
+
+        <main class="spatial-workspace">
+            <aside class="spatial-col spatial-col--left">
+                <section class="glass-panel">
+                    <div class="panel-header">
+                        <div class="panel-header__titles">
+                            <h2 class="panel-header__title">Perfil</h2>
+                            <span class="panel-header__subtitle">Software Developer</span>
+                        </div>
+                        <i class="fa-solid fa-wave-square"></i>
+                    </div>
+
+                    <div class="portrait-showcase">
+                        <img src="./assets/img/yo-web.jpg" alt="Zeus Martín Llera" class="portrait-showcase__img" decoding="async">
+                    </div>
+
+                    <div class="portrait-meta">
+                        <div>
+                            <h1 class="portrait-meta__name">Zeus Martín Llera</h1>
+                            <p class="portrait-meta__role">Team Leader · THB Hotels</p>
+                        </div>
+                        <div class="portrait-meta__actions">
+                            <a href="./assets/CV.pdf" download="CV_Zeus_Martin.pdf" class="icon-circle" title="Descargar CV">
+                                <i class="fa-solid fa-download"></i>
+                            </a>
+                            <a href="./proyectos.html" class="icon-circle" title="Ver Proyectos">
+                                <i class="fa-solid fa-plus"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="feature-banner-card">
+                    <div>
+                        <span class="feature-banner-card__eyebrow">Sobre mí</span>
+                        <h3 class="feature-banner-card__title">Ingeniería con Principios SOLID y Arquitectura Escalable</h3>
+                        <p class="feature-banner-card__desc">
+                            Apasionado por programar, liderar equipos y diseñar software limpio preparado para escalar sin deuda técnica.
+                        </p>
+                    </div>
+                    <div class="feature-banner-card__footer">
+                        <span class="panel-header__subtitle">+15 Proyectos</span>
+                        <a href="./assets/CV.pdf" download="CV_Zeus_Martin.pdf" class="glass-pill-btn glass-pill-btn--active">
+                            <span>Curriculum</span>
+                        </a>
+                    </div>
+                </section>
+            </aside>
+
+            <section class="spatial-col spatial-col--center">
+                <div class="glass-panel glass-panel--grow">
+                    <div class="panel-header">
+                        <div class="panel-header__titles">
+                            <h2 class="panel-header__title">Hola, soy Zeus Martín</h2>
+                        </div>
+                        <nav class="pill-group" aria-label="Navegación principal">
+                            <a href="./index.html" class="glass-pill-btn glass-pill-btn--active">Inicio</a>
+                            <a href="./habilidades.html" class="glass-pill-btn">Habilidades</a>
+                            <a href="./proyectos.html" class="glass-pill-btn">Proyectos</a>
+                        </nav>
+                    </div>
+
+                    <div class="glass-row-grid">
+                        <div class="glass-row-card">
+                            <div class="glass-row-card__thumb">
+                                <i class="fa-solid fa-cubes"></i>
+                            </div>
+                            <div class="glass-row-card__info">
+                                <h3 class="glass-row-card__title">Principios SOLID</h3>
+                                <p class="glass-row-card__sub">Código limpio, modular y mantenible</p>
+                            </div>
+                        </div>
+
+                        <div class="glass-row-card">
+                            <div class="glass-row-card__thumb">
+                                <i class="fa-solid fa-sitemap"></i>
+                            </div>
+                            <div class="glass-row-card__info">
+                                <h3 class="glass-row-card__title">Diseño por Arquitectura</h3>
+                                <p class="glass-row-card__sub">Sistemas preparados para escalar</p>
+                            </div>
+                        </div>
+
+                        <div class="glass-row-card">
+                            <div class="glass-row-card__thumb">
+                                <i class="fa-brands fa-laravel"></i>
+                            </div>
+                            <div class="glass-row-card__info">
+                                <h3 class="glass-row-card__title">Laravel &amp; PHP</h3>
+                                <p class="glass-row-card__sub">Desarrollo Backend de alto nivel</p>
+                            </div>
+                        </div>
+
+                        <div class="glass-row-card">
+                            <div class="glass-row-card__thumb">
+                                <i class="fa-solid fa-database"></i>
+                            </div>
+                            <div class="glass-row-card__info">
+                                <h3 class="glass-row-card__title">Bases de Datos &amp; ORM</h3>
+                                <p class="glass-row-card__sub">MySQL · SQL Server · Eloquent</p>
+                            </div>
+                        </div>
+
+                        <div class="glass-row-card">
+                            <div class="glass-row-card__thumb">
+                                <i class="fa-solid fa-cloud"></i>
+                            </div>
+                            <div class="glass-row-card__info">
+                                <h3 class="glass-row-card__title">API REST &amp; Tiempo Real</h3>
+                                <p class="glass-row-card__sub">Conectividad y servicios escalables</p>
+                            </div>
+                        </div>
+
+                        <div class="glass-row-card">
+                            <div class="glass-row-card__thumb">
+                                <i class="fa-solid fa-chess-king"></i>
+                            </div>
+                            <div class="glass-row-card__info">
+                                <h3 class="glass-row-card__title">Liderazgo &amp; Equipo</h3>
+                                <p class="glass-row-card__sub">Team Leader y Tutor FP DUAL</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel-header">
+                        <div class="panel-header__titles">
+                            <h2 class="panel-header__title">Proyectos Destacados</h2>
+                            <a href="./proyectos.html" class="glass-pill-btn">Ver todos</a>
+                        </div>
+                        <div class="pill-group">
+                            <a href="./proyectos.html" class="icon-circle" aria-label="Ver catálogo de proyectos">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="album-grid">
+                        <article class="album-card" data-project-url="https://github.com/jcarrozadev/tfc_evg">
+                            <div class="album-card__media">
+                                <img src="./assets/img/guards-web.jpg" alt="Gestor de Guardias" class="album-card__img" decoding="async">
+                                <span class="album-card__tag">Laravel</span>
+                            </div>
+                            <h3 class="album-card__title">Gestor de Guardias</h3>
+                            <p class="album-card__desc">Asignación y organización de guardias de profesores.</p>
+                            <div class="album-card__footer">
+                                <div class="album-card__tech">
+                                    <i class="fab fa-laravel"></i>
+                                    <i class="fab fa-php"></i>
+                                    <i class="fas fa-database"></i>
+                                </div>
+                                <a href="https://github.com/jcarrozadev/tfc_evg" target="_blank" rel="noopener noreferrer" class="album-card__open">
+                                    <span>Abrir</span>
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </a>
+                            </div>
+                        </article>
+
+                        <article class="album-card" data-project-url="https://github.com/zmartinl/TaskManager">
+                            <div class="album-card__media">
+                                <img src="./assets/img/taskManager-web.jpg" alt="TaskManager" class="album-card__img" decoding="async">
+                                <span class="album-card__tag">Laravel</span>
+                            </div>
+                            <h3 class="album-card__title">TaskManager</h3>
+                            <p class="album-card__desc">Gestión de tareas y proyectos con seguimiento de progreso.</p>
+                            <div class="album-card__footer">
+                                <div class="album-card__tech">
+                                    <i class="fab fa-laravel"></i>
+                                    <i class="fab fa-js"></i>
+                                    <i class="fas fa-database"></i>
+                                </div>
+                                <a href="https://github.com/zmartinl/TaskManager" target="_blank" rel="noopener noreferrer" class="album-card__open">
+                                    <span>Abrir</span>
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </a>
+                            </div>
+                        </article>
+
+                        <article class="album-card" data-project-url="https://github.com/zmartinl/Concesionario">
+                            <div class="album-card__media">
+                                <img src="./assets/img/concesionario-web.jpg" alt="Concesionario" class="album-card__img" decoding="async">
+                                <span class="album-card__tag">Laravel</span>
+                            </div>
+                            <h3 class="album-card__title">Concesionario</h3>
+                            <p class="album-card__desc">Gestión de stock, catálogo y ventas de vehículos.</p>
+                            <div class="album-card__footer">
+                                <div class="album-card__tech">
+                                    <i class="fab fa-laravel"></i>
+                                    <i class="fab fa-bootstrap"></i>
+                                    <i class="fas fa-database"></i>
+                                </div>
+                                <a href="https://github.com/zmartinl/Concesionario" target="_blank" rel="noopener noreferrer" class="album-card__open">
+                                    <span>Abrir</span>
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="private-glass-box">
+                        <div class="private-glass-box__content">
+                            <h3 class="private-glass-box__title">
+                                <i class="fa-solid fa-lock"></i>
+                                <span>+ Muchos Más Proyectos Privados de Empresa</span>
+                            </h3>
+                            <p class="private-glass-box__text">
+                                He desarrollado muchos más proyectos y sistemas en producción para mi empresa que son privados por confidencialidad, por lo cual no puedo publicarlos aquí.
+                            </p>
+                        </div>
+                        <a href="./proyectos.html" class="glass-pill-btn glass-pill-btn--active">
+                            <span>Ver Proyectos</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <aside class="spatial-col spatial-col--right">
+                <section class="glass-panel glass-panel--grow">
+                    <div class="panel-header">
+                        <div>
+                            <h2 class="panel-header__title">Trayectoria &amp; Stack</h2>
+                            <p class="panel-header__subtitle">Experiencia, formación y tecnologías</p>
+                        </div>
+                        <a href="./habilidades.html" class="icon-circle" aria-label="Ver todas las habilidades">
+                            <i class="fa-solid fa-plus"></i>
+                        </a>
+                    </div>
+
+                    <div class="library-search">
+                        <i class="fa-solid fa-sparkles"></i>
+                        <span>Resumen de carrera profesional</span>
+                    </div>
+
+                    <div class="pill-group">
+                        <a href="./index.html" class="glass-pill-btn glass-pill-btn--active">Experiencia</a>
+                        <a href="./habilidades.html" class="glass-pill-btn">Habilidades</a>
+                        <a href="./proyectos.html" class="glass-pill-btn">Repositorios</a>
+                    </div>
+
+                    <div class="library-list">
+                        <div class="library-item">
+                            <div class="library-item__icon">
+                                <i class="fa-solid fa-building"></i>
+                            </div>
+                            <div class="library-item__body">
+                                <h3 class="library-item__title">THB Hotels</h3>
+                                <p class="library-item__meta">Software Developer &amp; Team Leader · Actual</p>
+                            </div>
+                            <span class="library-item__badge">Activo</span>
+                        </div>
+
+                        <div class="library-item">
+                            <div class="library-item__icon">
+                                <i class="fa-solid fa-chalkboard-user"></i>
+                            </div>
+                            <div class="library-item__body">
+                                <h3 class="library-item__title">Tutor &amp; Docente 1º DUAL</h3>
+                                <p class="library-item__meta">Formación y mentoría de desarrolladores</p>
+                            </div>
+                        </div>
+
+                        <div class="library-item">
+                            <div class="library-item__icon">
+                                <i class="fa-solid fa-graduation-cap"></i>
+                            </div>
+                            <div class="library-item__body">
+                                <h3 class="library-item__title">Técnico Superior DAW</h3>
+                                <p class="library-item__meta">Escuela Virgen de Guadalupe · 2023–2025</p>
+                            </div>
+                        </div>
+
+                        <div class="library-item">
+                            <div class="library-item__icon">
+                                <i class="fa-solid fa-network-wired"></i>
+                            </div>
+                            <div class="library-item__body">
+                                <h3 class="library-item__title">Doscar Programas y Sistemas</h3>
+                                <p class="library-item__meta">Soporte, Redes, TPV &amp; Web · 2023</p>
+                            </div>
+                        </div>
+
+                        <div class="library-item">
+                            <div class="library-item__icon">
+                                <i class="fa-brands fa-js"></i>
+                            </div>
+                            <div class="library-item__body">
+                                <h3 class="library-item__title">JS, TypeScript &amp; React</h3>
+                                <p class="library-item__meta">Desarrollo Frontend moderno</p>
+                            </div>
+                        </div>
+
+                        <div class="library-item">
+                            <div class="library-item__icon">
+                                <i class="fa-brands fa-bootstrap"></i>
+                            </div>
+                            <div class="library-item__body">
+                                <h3 class="library-item__title">Bootstrap &amp; Tailwind CSS</h3>
+                                <p class="library-item__meta">Sistemas de diseño adaptables</p>
+                            </div>
+                        </div>
+
+                        <div class="library-item">
+                            <div class="library-item__icon">
+                                <i class="fa-solid fa-shield-heart"></i>
+                            </div>
+                            <div class="library-item__body">
+                                <h3 class="library-item__title">Gestión de la Frustración</h3>
+                                <p class="library-item__meta">Resolución analítica bajo presión</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </aside>
+        </main>
+
+        <footer class="spatial-dock">
+            <div class="spatial-dock__left">
+                <a href="./index.html" class="icon-circle icon-circle--active" aria-label="Inicio">
+                    <i class="fa-solid fa-play"></i>
+                </a>
+                <a href="./habilidades.html" class="icon-circle" aria-label="Habilidades">
+                    <i class="fa-solid fa-layer-group"></i>
+                </a>
+                <a href="./proyectos.html" class="icon-circle" aria-label="Proyectos">
+                    <i class="fa-solid fa-folder-open"></i>
+                </a>
+            </div>
+
+            <div class="spatial-dock__bar">
+                <span>SOLID</span>
+                <div class="spatial-dock__track">
+                    <div class="spatial-dock__fill"></div>
+                </div>
+                <span>Escalable</span>
+            </div>
+
+            <div class="spatial-dock__right">
+                <a href="mailto:zmartinllera1@gmail.com" class="icon-circle" aria-label="Email">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+                <a href="./assets/CV.pdf" download="CV_Zeus_Martin.pdf" class="glass-pill-btn">
+                    <i class="fa-solid fa-file-pdf"></i>
+                    <span>Descargar CV</span>
+                </a>
+            </div>
+        </footer>
+    </div>
+
+    <script src="./assets/proyectos.js?v=6"></script>
 </body>
 </html>
