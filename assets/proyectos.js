@@ -8,35 +8,44 @@ window.addEventListener('load', () => {
     const menuBtn = document.getElementById('menu-btn');
     const nav = document.querySelector('header nav');
 
+    if (tresEnRaya) {
+        tresEnRaya.addEventListener('click', () => {
+            window.open('https://github.com/zmartinl/3EnRaya', '_blank', 'noopener,noreferrer');
+        });
+    }
 
-    tresEnRaya.addEventListener('click', () => {
-        window.location.href = 'https://github.com/zmartinl/3EnRaya';
-    });
+    if (bizum) {
+        bizum.addEventListener('click', () => {
+            window.open('https://github.com/zmartinl/Bizum', '_blank', 'noopener,noreferrer');
+        });
+    }
 
-    bizum.addEventListener('click', () => {
-        window.location.href = 'https://github.com/zmartinl/Bizum';
-    });
+    if (guards) {
+        guards.addEventListener('click', () => {
+            window.open('https://github.com/jcarrozadev/tfc_evg', '_blank', 'noopener,noreferrer');
+        });
+    }
 
-    guards.addEventListener('click', () => {
-        window.location.href = 'https://github.com/jcarrozadev/tfc_evg';
-    });
+    if (reservaLibros) {
+        reservaLibros.addEventListener('click', () => {
+            window.open('https://github.com/zmartinl/ZeusReservaLibros', '_blank', 'noopener,noreferrer');
+        });
+    }
 
-    reservaLibros.addEventListener('click', () => {
-        window.location.href = 'https://github.com/zmartinl/ZeusReservaLibros';
-    });
+    if (concesionario) {
+        concesionario.addEventListener('click', () => {
+            window.open('https://github.com/zmartinl/Concesionario', '_blank', 'noopener,noreferrer');
+        });
+    }
 
-    concesionario.addEventListener('click', () => {
-        window.location.href = 'https://github.com/zmartinl/Concesionario';
-    });
-
-    taskManager.addEventListener('click', () => {
-        window.location.href = 'https://github.com/zmartinl/TaskManager';
-    });
+    if (taskManager) {
+        taskManager.addEventListener('click', () => {
+            window.open('https://github.com/zmartinl/TaskManager', '_blank', 'noopener,noreferrer');
+        });
+    }
 
     if (menuBtn && nav) {
         menuBtn.addEventListener('click', () => {
-            console.log('Menu button clicked');
-            
             nav.classList.toggle('activo');
         });
 

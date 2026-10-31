@@ -1,44 +1,651 @@
 <!DOCTYPE html>
 <html lang="es">
-    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zeus Martín — Portfolio</title>
+    <meta name="description" content="Portfolio de Zeus Martín Llera — Software Developer especializado en Laravel, principios SOLID y arquitectura escalable en Rhinoceros Auklet.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="./assets/style.css">
-    <title>Portfolio Zeus</title>
+    <link rel="stylesheet" href="./assets/style.css?v=3">
 </head>
 <body>
-    <header>
-        <a href="#" class="logo">Software Developer</a>
-        <nav>
-            <a href="#" class="activo">Inicio</a>
-            <a href="./habilidades.html">Habilidades</a>
-            <a href="./proyectos.html">Proyectos</a>
-        </nav>
-        <div id="menu-btn" class="menu-btn">
-            <i class="fas fa-bars"></i>
-        </div>
-    </header>
-    <section class="inicio">
-        <div class="imagen-inicio">
-            <img src="assets/img/yo.jpg" alt="Imagen de Zeus">
-        </div>
-        <div class="contenido-inicio">
-            <h1>Hola, soy <span>Zeus</span></h1>
-            <h3 class="texto-escribiendo">Soy <span></span></h3>
+    <div class="wallpaper-background" aria-hidden="true"></div>
 
-            <p>
-                Me encanta programar y aprender cosas nuevas. Soy un apasionado de la tecnología y me gusta estar al día de las últimas tendencias. Me encanta trabajar en equipo y aportar mi granito de arena en cada proyecto.
-            </p>
-            <div class="iconos-sociales">
-                <a href="https://www.linkedin.com/in/zeus-martin-llera-a64355247/"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="https://github.com/zmartinl"><i class="fa-brands fa-github"></i></a>
-                <a href="https://www.instagram.com/zeusmartin__/"><i class="fa-brands fa-instagram"></i></a>
+    <div class="reopen-dock-bubble" id="reopenBanner">
+        <span>Ventana minimizada</span>
+        <button type="button" class="liquid-glass-btn" id="btnReopenWindow" style="padding: 6px 14px; font-size: 12px;">Restaurar</button>
+    </div>
+
+    <main class="desktop-stage">
+        <div class="mac-window" id="macWindow" role="region" aria-label="Ventana de aplicación Portfolio">
+            <div class="mac-window__titlebar">
+                <div class="mac-traffic-lights" aria-label="Controles de ventana">
+                    <button type="button" class="mac-btn-traffic mac-btn-traffic--close" id="btnTrafficClose" title="Cerrar ventana" aria-label="Cerrar">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                    <button type="button" class="mac-btn-traffic mac-btn-traffic--minimize" id="btnTrafficMinimize" title="Minimizar" aria-label="Minimizar">
+                        <i class="fa-solid fa-minus"></i>
+                    </button>
+                    <button type="button" class="mac-btn-traffic mac-btn-traffic--maximize" id="btnTrafficMaximize" title="Pantalla completa / Restaurar" aria-label="Maximizar">
+                        <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+                    </button>
+                </div>
+
+                <div class="mac-window__title">Zeus Martín — Portfolio</div>
+
+                <div class="mac-window__actions">
+                    <a href="./assets/CV.pdf" download="CV_Zeus_Martin.pdf" class="mac-ghost-btn" title="Descargar Currículum">
+                        <i class="fa-solid fa-arrow-down-to-bracket"></i>
+                        <span>CV</span>
+                    </a>
+                </div>
             </div>
-            <a href="./assets/CV.pdf" download="CV.pdf" class="btn">Curriculum</a>
+
+            <div class="mac-window-content">
+                <section class="mac-section-panel is-active" id="section-inicio">
+                    <div class="hero-editorial">
+                        <div class="hero-editorial__main">
+                            <div class="hero-status-pill">
+                                <span class="hero-status-dot"></span>
+                                <span>Software Developer · Rhinoceros Auklet</span>
+                            </div>
+
+                            <h1 class="hero-editorial__title">
+                                Hola, soy <span>Zeus Martín</span>
+                            </h1>
+
+                            <h2 class="hero-editorial__lead">
+                                Desarrollador de Software · Arquitectura Escalable &amp; Principios SOLID
+                            </h2>
+
+                            <p class="hero-editorial__desc">
+                                Apasionado por la tecnología, el código limpio y la creación de sistemas robustos preparados para evolucionar sin deuda técnica. Especializado en el ecosistema <strong>Laravel</strong>, persistencia relacional con <strong>MySQL &amp; SQL Server</strong> y desarrollo orientado a objetos. Actualmente desarrollo soluciones web profesionales en <strong>Rhinoceros Auklet</strong> enfocadas en escalabilidad, rendimiento y calidad de software.
+                            </p>
+
+                            <div class="hero-editorial__cta-row">
+                                <button type="button" class="liquid-glass-btn" data-direct-nav="proyectos">
+                                    <span>Ver Proyectos</span>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </button>
+                                <a href="./assets/CV.pdf" download="CV_Zeus_Martin.pdf" class="liquid-glass-btn liquid-glass-btn--ghost">
+                                    <i class="fa-solid fa-file-arrow-down"></i>
+                                    <span>Descargar CV</span>
+                                </a>
+                                <button type="button" class="liquid-glass-btn liquid-glass-btn--ghost" data-direct-nav="contacto">
+                                    <i class="fa-solid fa-paper-plane"></i>
+                                    <span>Contactar</span>
+                                </button>
+
+                                <div class="hero-social-strip">
+                                    <a href="https://github.com/zmartinl" target="_blank" rel="noopener noreferrer" class="hero-social-bubble" title="GitHub" aria-label="GitHub">
+                                        <i class="fa-brands fa-github"></i>
+                                    </a>
+                                    <a href="https://www.linkedin.com/in/zeus-martin-llera-a64355247/" target="_blank" rel="noopener noreferrer" class="hero-social-bubble" title="LinkedIn" aria-label="LinkedIn">
+                                        <i class="fa-brands fa-linkedin-in"></i>
+                                    </a>
+                                    <a href="https://www.instagram.com/zeusmartin__/" target="_blank" rel="noopener noreferrer" class="hero-social-bubble" title="Instagram" aria-label="Instagram">
+                                        <i class="fa-brands fa-instagram"></i>
+                                    </a>
+                                    <a href="mailto:zmartinllera1@gmail.com" class="hero-social-bubble" title="Email" aria-label="Email">
+                                        <i class="fa-solid fa-envelope"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="hero-metrics-grid">
+                            <div class="glass-metric-tile">
+                                <span class="glass-metric-tile__num">SOLID</span>
+                                <span class="glass-metric-tile__label">Diseño por Arquitectura</span>
+                            </div>
+                            <div class="glass-metric-tile">
+                                <span class="glass-metric-tile__num">Rhinoceros Auklet</span>
+                                <span class="glass-metric-tile__label">Software Developer</span>
+                            </div>
+                            <div class="glass-metric-tile">
+                                <span class="glass-metric-tile__num">+15</span>
+                                <span class="glass-metric-tile__label">Proyectos en Producción</span>
+                            </div>
+                            <div class="glass-metric-tile">
+                                <span class="glass-metric-tile__num">Full-Stack</span>
+                                <span class="glass-metric-tile__label">Desarrollo Web &amp; APIs</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="mac-section-panel" id="section-sobre-mi">
+                    <div class="section-head">
+                        <span class="section-head__eyebrow">Perfil &amp; Valores</span>
+                        <h2 class="section-head__title">Sobre Mí &amp; Visión Profesional</h2>
+                        <p class="section-head__desc">Construcción de software de alta calidad, mentalidad de equipo y rigor en la arquitectura.</p>
+                    </div>
+
+                    <div class="about-editorial-grid">
+                        <div class="glass-feature-box">
+                            <div class="glass-feature-box__icon"><i class="fa-solid fa-code"></i></div>
+                            <h3 class="glass-feature-box__title">Pasión Tecnológica &amp; Innovación Continua</h3>
+                            <p class="glass-feature-box__body">
+                                Me encanta programar y aprender cosas nuevas en cada desafío. Soy un apasionado del desarrollo web y me gusta estar a la vanguardia de las últimas tendencias, herramientas y estándares del sector.
+                            </p>
+                        </div>
+
+                        <div class="glass-feature-box">
+                            <div class="glass-feature-box__icon"><i class="fa-solid fa-cubes"></i></div>
+                            <h3 class="glass-feature-box__title">Principios SOLID &amp; Clean Code</h3>
+                            <p class="glass-feature-box__body">
+                                Aplico con disciplina los principios SOLID para construir arquitecturas limpias, modulares y desacopladas. Cada capa de la aplicación tiene una única responsabilidad bien definida, garantizando mantenibilidad a largo plazo.
+                            </p>
+                        </div>
+
+                        <div class="glass-feature-box">
+                            <div class="glass-feature-box__icon"><i class="fa-solid fa-people-group"></i></div>
+                            <h3 class="glass-feature-box__title">Trabajo en Equipo &amp; Metodologías Ágiles</h3>
+                            <p class="glass-feature-box__body">
+                                Me encanta colaborar y aportar en cada proyecto. En Rhinoceros Auklet participo en desarrollos coordinados, fomentando la comunicación transparente, el trabajo colaborativo con Git y entregas continuas de alto impacto en producción.
+                            </p>
+                        </div>
+
+                        <div class="glass-feature-box">
+                            <div class="glass-feature-box__icon"><i class="fa-solid fa-laptop-code"></i></div>
+                            <h3 class="glass-feature-box__title">Desarrollo Continuo &amp; Buenas Prácticas</h3>
+                            <p class="glass-feature-box__body">
+                                Comprometido con la constante evolución técnica, el diseño de software modular, la refactorización proactiva y la creación de código limpio y sostenible preparado para crecer.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="mac-section-panel" id="section-proyectos">
+                    <div class="section-head">
+                        <span class="section-head__eyebrow">Portfolio</span>
+                        <h2 class="section-head__title">Proyectos Seleccionados</h2>
+                        <p class="section-head__desc">Todos los repositorios públicos se abren en pestaña nueva para no perder tu navegación.</p>
+                    </div>
+
+                    <div class="private-banner-liquid">
+                        <div class="private-banner-icon">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+                        <div>
+                            <h3 class="private-banner-title">+ Muchos Más Proyectos Privados en Producción (Empresa)</h3>
+                            <p class="private-banner-text">
+                                Además de los proyectos públicos mostrados aquí, he diseñado y desarrollado <strong>múltiples proyectos y plataformas de gran escala para mi empresa (Rhinoceros Auklet)</strong> actualmente en producción. Por motivos de <strong>confidencialidad corporativa y propiedad intelectual</strong>, sus repositorios y código son privados y no pueden hacerse públicos.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="projects-filter-strip" data-filter-group>
+                        <button type="button" class="glass-filter-pill is-active" data-filter="all">Todos</button>
+                        <button type="button" class="glass-filter-pill" data-filter="laravel">Laravel &amp; Full-Stack</button>
+                        <button type="button" class="glass-filter-pill" data-filter="php-java">PHP &amp; Java</button>
+                    </div>
+
+                    <div class="projects-crystal-grid">
+                        <article class="project-glass-card" data-category="laravel" data-project-key="guardsEVG">
+                            <div class="project-glass-card__preview">
+                                <img src="./assets/img/guards.png" alt="Captura del Gestor de Guardias" loading="eager" decoding="async">
+                                <span class="project-tag-glass">Laravel · TFG</span>
+                            </div>
+                            <div class="project-glass-card__content">
+                                <h3 class="project-glass-card__title">Gestor de Guardias</h3>
+                                <p class="project-glass-card__desc">Herramienta web para organizar, asignar y coordinar guardias de profesores en centros educativos.</p>
+                                <div class="project-glass-card__techs">
+                                    <i class="fab fa-laravel" title="Laravel"></i>
+                                    <i class="fab fa-php" title="PHP"></i>
+                                    <i class="fab fa-bootstrap" title="Bootstrap"></i>
+                                    <i class="fab fa-js" title="JavaScript"></i>
+                                    <i class="fas fa-database" title="Base de datos"></i>
+                                </div>
+                                <div class="project-glass-card__footer">
+                                    <button type="button" class="glass-inline-btn" data-quick-look="guardsEVG">
+                                        <i class="fa-solid fa-eye"></i>
+                                        <span>Detalles</span>
+                                    </button>
+                                    <a href="https://github.com/jcarrozadev/tfc_evg" target="_blank" rel="noopener noreferrer" class="glass-inline-btn">
+                                        <span>GitHub</span>
+                                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="project-glass-card" data-category="laravel" data-project-key="taskManager">
+                            <div class="project-glass-card__preview">
+                                <img src="./assets/img/taskManager.png" alt="Captura de TaskManager" loading="eager" decoding="async">
+                                <span class="project-tag-glass">Laravel</span>
+                            </div>
+                            <div class="project-glass-card__content">
+                                <h3 class="project-glass-card__title">TaskManager</h3>
+                                <p class="project-glass-card__desc">Aplicación web para la gestión de tareas y proyectos colaborativos, con seguimiento del progreso.</p>
+                                <div class="project-glass-card__techs">
+                                    <i class="fab fa-laravel" title="Laravel"></i>
+                                    <i class="fab fa-php" title="PHP"></i>
+                                    <i class="fab fa-bootstrap" title="Bootstrap"></i>
+                                    <i class="fab fa-js" title="JavaScript"></i>
+                                    <i class="fas fa-database" title="Base de datos"></i>
+                                </div>
+                                <div class="project-glass-card__footer">
+                                    <button type="button" class="glass-inline-btn" data-quick-look="taskManager">
+                                        <i class="fa-solid fa-eye"></i>
+                                        <span>Detalles</span>
+                                    </button>
+                                    <a href="https://github.com/zmartinl/TaskManager" target="_blank" rel="noopener noreferrer" class="glass-inline-btn">
+                                        <span>GitHub</span>
+                                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="project-glass-card" data-category="laravel" data-project-key="concesionario">
+                            <div class="project-glass-card__preview">
+                                <img src="./assets/img/concesionario.png" alt="Captura de Concesionario" loading="eager" decoding="async">
+                                <span class="project-tag-glass">Laravel</span>
+                            </div>
+                            <div class="project-glass-card__content">
+                                <h3 class="project-glass-card__title">Concesionario</h3>
+                                <p class="project-glass-card__desc">Aplicación para gestionar un concesionario de vehículos, incluyendo catálogo, ventas y stock.</p>
+                                <div class="project-glass-card__techs">
+                                    <i class="fab fa-laravel" title="Laravel"></i>
+                                    <i class="fab fa-php" title="PHP"></i>
+                                    <i class="fab fa-bootstrap" title="Bootstrap"></i>
+                                    <i class="fab fa-js" title="JavaScript"></i>
+                                    <i class="fas fa-database" title="Base de datos"></i>
+                                </div>
+                                <div class="project-glass-card__footer">
+                                    <button type="button" class="glass-inline-btn" data-quick-look="concesionario">
+                                        <i class="fa-solid fa-eye"></i>
+                                        <span>Detalles</span>
+                                    </button>
+                                    <a href="https://github.com/zmartinl/Concesionario" target="_blank" rel="noopener noreferrer" class="glass-inline-btn">
+                                        <span>GitHub</span>
+                                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="project-glass-card" data-category="php-java" data-project-key="reservaLibros">
+                            <div class="project-glass-card__preview">
+                                <img src="./assets/img/reservaLibros.jpg" alt="Captura de Reserva Libros" loading="eager" decoding="async">
+                                <span class="project-tag-glass">PHP</span>
+                            </div>
+                            <div class="project-glass-card__content">
+                                <h3 class="project-glass-card__title">Reserva Libros</h3>
+                                <p class="project-glass-card__desc">Aplicación web para gestionar la reserva y préstamo de libros en una biblioteca con base de datos.</p>
+                                <div class="project-glass-card__techs">
+                                    <i class="fab fa-php" title="PHP"></i>
+                                    <i class="fas fa-database" title="Base de datos"></i>
+                                </div>
+                                <div class="project-glass-card__footer">
+                                    <button type="button" class="glass-inline-btn" data-quick-look="reservaLibros">
+                                        <i class="fa-solid fa-eye"></i>
+                                        <span>Detalles</span>
+                                    </button>
+                                    <a href="https://github.com/zmartinl/ZeusReservaLibros" target="_blank" rel="noopener noreferrer" class="glass-inline-btn">
+                                        <span>GitHub</span>
+                                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="project-glass-card" data-category="php-java" data-project-key="bizum">
+                            <div class="project-glass-card__preview">
+                                <img src="./assets/img/bizum.jpg" alt="Captura de Bizum" loading="eager" decoding="async">
+                                <span class="project-tag-glass">Java</span>
+                            </div>
+                            <div class="project-glass-card__content">
+                                <h3 class="project-glass-card__title">Bizum</h3>
+                                <p class="project-glass-card__desc">Simulación de transferencias y pagos móviles entre usuarios con interfaz gráfica intuitiva.</p>
+                                <div class="project-glass-card__techs">
+                                    <i class="fab fa-java" title="Java"></i>
+                                    <i class="fas fa-database" title="Base de datos"></i>
+                                </div>
+                                <div class="project-glass-card__footer">
+                                    <button type="button" class="glass-inline-btn" data-quick-look="bizum">
+                                        <i class="fa-solid fa-eye"></i>
+                                        <span>Detalles</span>
+                                    </button>
+                                    <a href="https://github.com/zmartinl/Bizum" target="_blank" rel="noopener noreferrer" class="glass-inline-btn">
+                                        <span>GitHub</span>
+                                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="project-glass-card" data-category="php-java" data-project-key="tresEnRaya">
+                            <div class="project-glass-card__preview">
+                                <img src="./assets/img/3enraya.jpg" alt="Captura de 3 en raya" loading="eager" decoding="async">
+                                <span class="project-tag-glass">Java Swing</span>
+                            </div>
+                            <div class="project-glass-card__content">
+                                <h3 class="project-glass-card__title">3 en raya</h3>
+                                <p class="project-glass-card__desc">Juego clásico desarrollado en Java y Java Swing con programación orientada a objetos.</p>
+                                <div class="project-glass-card__techs">
+                                    <i class="fab fa-java" title="Java"></i>
+                                </div>
+                                <div class="project-glass-card__footer">
+                                    <button type="button" class="glass-inline-btn" data-quick-look="tresEnRaya">
+                                        <i class="fa-solid fa-eye"></i>
+                                        <span>Detalles</span>
+                                    </button>
+                                    <a href="https://github.com/zmartinl/3EnRaya" target="_blank" rel="noopener noreferrer" class="glass-inline-btn">
+                                        <span>GitHub</span>
+                                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <section class="mac-section-panel" id="section-habilidades">
+                    <div class="section-head">
+                        <span class="section-head__eyebrow">Competencias</span>
+                        <h2 class="section-head__title">Habilidades Técnicas &amp; Soft Skills</h2>
+                        <p class="section-head__desc">Especialidades full-stack: desarrollo backend, interfaces interactivas, bases de datos y arquitectura web.</p>
+                    </div>
+
+                    <div class="skills-layout-grid">
+                        <div class="glass-skill-cluster">
+                            <div class="skill-cluster-header">
+                                <div class="skill-cluster-icon"><i class="fa-brands fa-laravel"></i></div>
+                                <h3 class="skill-cluster-title">Backend &amp; Arquitectura</h3>
+                            </div>
+                            <div class="skill-badges-flow">
+                                <span class="crystal-chip"><i class="fa-brands fa-laravel"></i> Laravel</span>
+                                <span class="crystal-chip"><i class="fa-brands fa-php"></i> PHP</span>
+                                <span class="crystal-chip"><i class="fa-solid fa-cubes"></i> Principios SOLID</span>
+                                <span class="crystal-chip"><i class="fa-solid fa-sitemap"></i> Arquitectura Escalable</span>
+                                <span class="crystal-chip"><i class="fa-solid fa-cloud"></i> API REST</span>
+                                <span class="crystal-chip"><i class="fa-solid fa-code"></i> Clean Code</span>
+                            </div>
+                        </div>
+
+                        <div class="glass-skill-cluster">
+                            <div class="skill-cluster-header">
+                                <div class="skill-cluster-icon"><i class="fa-solid fa-database"></i></div>
+                                <h3 class="skill-cluster-title">Bases de Datos &amp; ORM</h3>
+                            </div>
+                            <div class="skill-badges-flow">
+                                <span class="crystal-chip"><i class="fa-solid fa-database"></i> Eloquent ORM</span>
+                                <span class="crystal-chip"><i class="fa-solid fa-server"></i> MySQL</span>
+                                <span class="crystal-chip"><i class="fa-solid fa-table"></i> SQL Server</span>
+                                <span class="crystal-chip"><i class="fa-solid fa-diagram-project"></i> Modelado Relacional</span>
+                            </div>
+                        </div>
+
+                        <div class="glass-skill-cluster">
+                            <div class="skill-cluster-header">
+                                <div class="skill-cluster-icon"><i class="fa-brands fa-js"></i></div>
+                                <h3 class="skill-cluster-title">Frontend &amp; Lenguajes</h3>
+                            </div>
+                            <div class="skill-badges-flow">
+                                <span class="crystal-chip"><i class="fa-brands fa-js"></i> JavaScript</span>
+                                <span class="crystal-chip"><i class="fa-solid fa-code"></i> TypeScript</span>
+                                <span class="crystal-chip"><i class="fa-brands fa-react"></i> React (Aprendiendo)</span>
+                                <span class="crystal-chip"><i class="fa-brands fa-bootstrap"></i> Bootstrap</span>
+                                <span class="crystal-chip"><i class="fa-solid fa-wind"></i> Tailwind CSS</span>
+                                <span class="crystal-chip"><i class="fa-brands fa-java"></i> Java</span>
+                                <span class="crystal-chip"><i class="fa-solid fa-c"></i> C</span>
+                            </div>
+                        </div>
+
+                        <div class="glass-skill-cluster">
+                            <div class="skill-cluster-header">
+                                <div class="skill-cluster-icon"><i class="fa-solid fa-users"></i></div>
+                                <h3 class="skill-cluster-title">Metodologías &amp; Soft Skills</h3>
+                            </div>
+                            <div class="skill-badges-flow">
+                                <span class="crystal-chip"><i class="fa-solid fa-users"></i> Trabajo en equipo</span>
+                                <span class="crystal-chip"><i class="fa-solid fa-comments"></i> Comunicación proactiva</span>
+                                <span class="crystal-chip"><i class="fa-solid fa-brain"></i> Resolución de problemas</span>
+                                <span class="crystal-chip"><i class="fa-brands fa-git-alt"></i> Git &amp; GitHub</span>
+                                <span class="crystal-chip"><i class="fa-brands fa-windows"></i> Windows &amp; Linux</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="mac-section-panel" id="section-experiencia">
+                    <div class="section-head">
+                        <span class="section-head__eyebrow">Carrera</span>
+                        <h2 class="section-head__title">Experiencia Profesional &amp; Formación</h2>
+                        <p class="section-head__desc">Cronología de trayectoria laboral y formación académica.</p>
+                    </div>
+
+                    <div class="timeline-stream">
+                        <div class="timeline-stream-step">
+                            <div class="timeline-stream-step__bullet"></div>
+                            <div class="timeline-stream-step__card">
+                                <div class="timeline-stream-step__period">Enero 2025 – Actualidad</div>
+                                <h3 class="timeline-stream-step__role">Software Developer</h3>
+                                <h4 class="timeline-stream-step__org">Rhinoceros Auklet</h4>
+                                <p class="timeline-stream-step__desc">
+                                    Desarrollo web en Laravel y mantenimiento de plataformas corporativas privadas. Diseño de arquitecturas escalables, persistencia relacional con MySQL y SQL Server, y creación de servicios robustos para el negocio hotelero.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-stream-step">
+                            <div class="timeline-stream-step__bullet"></div>
+                            <div class="timeline-stream-step__card">
+                                <div class="timeline-stream-step__period">2023 – 2025</div>
+                                <h3 class="timeline-stream-step__role">Técnico Superior en Desarrollo de Aplicaciones Web (DAW)</h3>
+                                <h4 class="timeline-stream-step__org">Escuela Virgen de Guadalupe</h4>
+                                <p class="timeline-stream-step__desc">
+                                    Formación técnica superior en desarrollo full-stack, ingeniería de software en PHP/Laravel, bases de datos relacionales, JavaScript, TypeScript y despliegue de aplicaciones web.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-stream-step">
+                            <div class="timeline-stream-step__bullet"></div>
+                            <div class="timeline-stream-step__card">
+                                <div class="timeline-stream-step__period">2025</div>
+                                <h3 class="timeline-stream-step__role">Nivel B1 Inglés</h3>
+                                <h4 class="timeline-stream-step__org">Escuela Oficial de Idiomas (EOI)</h4>
+                                <p class="timeline-stream-step__desc">
+                                    Certificación oficial de competencia lingüística en lengua inglesa.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-stream-step">
+                            <div class="timeline-stream-step__bullet"></div>
+                            <div class="timeline-stream-step__card">
+                                <div class="timeline-stream-step__period">Marzo 2023 – Junio 2023</div>
+                                <h3 class="timeline-stream-step__role">Técnico de Sistemas &amp; Desarrollador Web</h3>
+                                <h4 class="timeline-stream-step__org">Doscar Programas y Sistemas</h4>
+                                <p class="timeline-stream-step__desc">
+                                    Configuración de TPV, soporte técnico, mantenimiento de equipos, instalación de redes, etiquetación de equipos y desarrollo web en WordPress.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-stream-step">
+                            <div class="timeline-stream-step__bullet"></div>
+                            <div class="timeline-stream-step__card">
+                                <div class="timeline-stream-step__period">2020 – 2023</div>
+                                <h3 class="timeline-stream-step__role">Técnico en Sistemas Microinformáticos y Redes (SMR)</h3>
+                                <h4 class="timeline-stream-step__org">Escuela Virgen de Guadalupe</h4>
+                                <p class="timeline-stream-step__desc">
+                                    Instalación y mantenimiento de sistemas operativos, configuración de redes locales y servidores.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-stream-step">
+                            <div class="timeline-stream-step__bullet"></div>
+                            <div class="timeline-stream-step__card">
+                                <div class="timeline-stream-step__period">2018 – 2020</div>
+                                <h3 class="timeline-stream-step__role">Educación Secundaria Obligatoria</h3>
+                                <h4 class="timeline-stream-step__org">IES Bárbara de Braganza</h4>
+                                <p class="timeline-stream-step__desc">
+                                    Etapa de formación secundaria obligatoria.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="mac-section-panel" id="section-contacto">
+                    <div class="section-head">
+                        <span class="section-head__eyebrow">Contacto</span>
+                        <h2 class="section-head__title">Contacto &amp; Redes Profesionales</h2>
+                        <p class="section-head__desc">Canales directos para conversar sobre proyectos, arquitectura o colaboraciones.</p>
+                    </div>
+
+                    <div class="contact-split-grid">
+                        <div class="glass-contact-tile">
+                            <div class="contact-entry-pill">
+                                <div class="contact-entry-icon"><i class="fa-solid fa-envelope"></i></div>
+                                <div>
+                                    <div class="contact-entry-tag">Correo electrónico</div>
+                                    <div class="contact-entry-value">zmartinllera1@gmail.com</div>
+                                </div>
+                                <button type="button" class="contact-action-btn" data-copy-text="zmartinllera1@gmail.com" title="Copiar correo" aria-label="Copiar email">
+                                    <i class="fa-regular fa-copy"></i>
+                                </button>
+                            </div>
+
+                            <div class="contact-entry-pill">
+                                <div class="contact-entry-icon"><i class="fa-brands fa-linkedin-in"></i></div>
+                                <div>
+                                    <div class="contact-entry-tag">LinkedIn</div>
+                                    <div class="contact-entry-value">Zeus Martín Llera</div>
+                                </div>
+                                <a href="https://www.linkedin.com/in/zeus-martin-llera-a64355247/" target="_blank" rel="noopener noreferrer" class="contact-action-btn" title="Abrir perfil de LinkedIn" aria-label="Abrir LinkedIn">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </a>
+                            </div>
+
+                            <div class="contact-entry-pill">
+                                <div class="contact-entry-icon"><i class="fa-brands fa-github"></i></div>
+                                <div>
+                                    <div class="contact-entry-tag">GitHub</div>
+                                    <div class="contact-entry-value">github.com/zmartinl</div>
+                                </div>
+                                <a href="https://github.com/zmartinl" target="_blank" rel="noopener noreferrer" class="contact-action-btn" title="Abrir perfil de GitHub" aria-label="Abrir GitHub">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </a>
+                            </div>
+
+                            <div class="contact-entry-pill">
+                                <div class="contact-entry-icon"><i class="fa-brands fa-instagram"></i></div>
+                                <div>
+                                    <div class="contact-entry-tag">Instagram</div>
+                                    <div class="contact-entry-value">@zeusmartin__</div>
+                                </div>
+                                <a href="https://www.instagram.com/zeusmartin__/" target="_blank" rel="noopener noreferrer" class="contact-action-btn" title="Abrir perfil de Instagram" aria-label="Abrir Instagram">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="glass-contact-tile">
+                            <h3 class="glass-feature-box__title">Currículum Vitae en PDF</h3>
+                            <p class="glass-feature-box__body">
+                                Descarga mi currículum completo con toda la información sobre experiencia laboral, proyectos empresariales en producción, competencias técnicas y titulación reglada.
+                            </p>
+                            <a href="./assets/CV.pdf" download="CV_Zeus_Martin.pdf" class="liquid-glass-btn" style="align-self: flex-start;">
+                                <i class="fa-solid fa-file-arrow-down"></i>
+                                <span>Descargar CV (PDF)</span>
+                            </a>
+                            <div style="margin-top: 18px;">
+                                <div class="contact-entry-tag" style="margin-bottom: 6px;">Disponibilidad &amp; Residencia</div>
+                                <p class="contact-entry-value" style="font-weight: 500;">
+                                    España · Disponible para proyectos en remoto o presenciales.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
         </div>
-    </section>
+    </main>
+
+    <div class="mac-dock-wrapper">
+        <nav class="mac-dock-bar" aria-label="Navegación principal Dock macOS">
+            <button type="button" class="dock-item-btn is-active" data-dock-nav="inicio" aria-label="Inicio">
+                <span class="dock-tooltip-bubble">Inicio</span>
+                <span class="dock-icon-box dock-color--home"><i class="fa-solid fa-house"></i></span>
+                <span class="dock-item-dot"></span>
+            </button>
+            <button type="button" class="dock-item-btn" data-dock-nav="sobre-mi" aria-label="Sobre mí">
+                <span class="dock-tooltip-bubble">Sobre mí</span>
+                <span class="dock-icon-box dock-color--about"><i class="fa-solid fa-user"></i></span>
+                <span class="dock-item-dot"></span>
+            </button>
+            <button type="button" class="dock-item-btn" data-dock-nav="proyectos" aria-label="Proyectos">
+                <span class="dock-tooltip-bubble">Proyectos</span>
+                <span class="dock-icon-box dock-color--projects"><i class="fa-solid fa-folder-open"></i></span>
+                <span class="dock-item-dot"></span>
+            </button>
+            <button type="button" class="dock-item-btn" data-dock-nav="habilidades" aria-label="Habilidades">
+                <span class="dock-tooltip-bubble">Habilidades</span>
+                <span class="dock-icon-box dock-color--skills"><i class="fa-solid fa-laptop-code"></i></span>
+                <span class="dock-item-dot"></span>
+            </button>
+            <button type="button" class="dock-item-btn" data-dock-nav="experiencia" aria-label="Experiencia">
+                <span class="dock-tooltip-bubble">Experiencia</span>
+                <span class="dock-icon-box dock-color--experience"><i class="fa-solid fa-briefcase"></i></span>
+                <span class="dock-item-dot"></span>
+            </button>
+            <button type="button" class="dock-item-btn" data-dock-nav="contacto" aria-label="Contacto">
+                <span class="dock-tooltip-bubble">Contacto</span>
+                <span class="dock-icon-box dock-color--contact"><i class="fa-solid fa-envelope"></i></span>
+                <span class="dock-item-dot"></span>
+            </button>
+
+            <span class="dock-glass-divider" aria-hidden="true"></span>
+
+            <a href="https://github.com/zmartinl" target="_blank" rel="noopener noreferrer" class="dock-item-btn" aria-label="GitHub">
+                <span class="dock-tooltip-bubble">GitHub</span>
+                <span class="dock-icon-box dock-color--github"><i class="fa-brands fa-github"></i></span>
+                <span class="dock-item-dot"></span>
+            </a>
+            <a href="./assets/CV.pdf" download="CV_Zeus_Martin.pdf" class="dock-item-btn" aria-label="Descargar CV">
+                <span class="dock-tooltip-bubble">Currículum PDF</span>
+                <span class="dock-icon-box dock-color--cv"><i class="fa-solid fa-file-pdf"></i></span>
+                <span class="dock-item-dot"></span>
+            </a>
+        </nav>
+    </div>
+
+    <div class="mac-sheet-backdrop" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="modalProjectTitle">
+        <div class="mac-sheet-panel">
+            <div class="mac-sheet-header">
+                <span class="mac-sheet-title" id="modalProjectTitle">Detalles del Proyecto</span>
+                <button type="button" class="mac-sheet-close" id="modalCloseBtn" aria-label="Cerrar modal">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <div class="mac-sheet-body">
+                <div class="mac-sheet-image">
+                    <img src="./assets/img/guards.png" alt="Previsualización de proyecto" id="modalProjectImg">
+                </div>
+                <p class="mac-sheet-desc" id="modalProjectDesc">Descripción del proyecto</p>
+                <div>
+                    <div class="contact-entry-tag" style="margin-bottom: 8px;">Tecnologías</div>
+                    <div class="mac-sheet-tech-box" id="modalProjectTechs"></div>
+                </div>
+            </div>
+            <div class="mac-sheet-footer">
+                <a href="#" target="_blank" rel="noopener noreferrer" class="liquid-glass-btn" id="modalProjectRepo">
+                    <span>Abrir Repositorio en GitHub</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
     <script src="./assets/menu.js"></script>
 </body>
 </html>
