@@ -58,7 +58,7 @@ body {
     position: fixed;
     inset: 0;
     z-index: -1;
-    background: url('./img/yo.jpg?v=3') center 22% / cover no-repeat;
+    background: url('./img/yo.jpg?v=4') center 22% / cover no-repeat;
     image-rendering: -webkit-optimize-contrast;
     pointer-events: none;
 }
@@ -925,13 +925,15 @@ body {
 
 .mac-dock-wrapper {
     position: fixed;
-    bottom: 16px;
+    bottom: max(14px, env(safe-area-inset-bottom));
     left: 0;
     width: 100%;
     display: flex;
     justify-content: center;
     z-index: 1000;
     pointer-events: none;
+    padding: 0 6px;
+    box-sizing: border-box;
 }
 
 .mac-dock-bar {
@@ -970,6 +972,10 @@ body {
     background: transparent;
     border: none;
     padding: 0;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    -webkit-user-select: none;
 }
 
 .dock-icon-box {
@@ -988,8 +994,15 @@ body {
     transition: transform 0.12s ease-out;
 }
 
-.dock-item-btn:hover .dock-icon-box {
-    transform: translate3d(0, -6px, 0);
+@media (hover: hover) and (pointer: fine) {
+    .dock-item-btn:hover .dock-icon-box {
+        transform: translate3d(0, -6px, 0);
+    }
+
+    .dock-item-btn:hover .dock-tooltip-bubble {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
 }
 
 .dock-item-dot {
@@ -1021,11 +1034,6 @@ body {
     transform: translate3d(0, 4px, 0);
     will-change: opacity, transform;
     transition: opacity 0.12s ease, transform 0.12s ease;
-}
-
-.dock-item-btn:hover .dock-tooltip-bubble {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
 }
 
 .dock-color--home { background: linear-gradient(135deg, #0071e3, #3ca2ff); }
@@ -1211,7 +1219,7 @@ body {
     .desktop-stage {
         height: auto;
         min-height: 100vh;
-        padding: 14px 10px 95px;
+        padding: 14px 10px 115px;
         overflow: visible;
     }
 
@@ -1243,14 +1251,26 @@ body {
     }
 
     .mac-dock-bar {
-        padding: 6px 10px 8px;
-        gap: 6px;
+        padding: 5px 6px 6px;
+        gap: 4px;
+        max-width: 100%;
+        box-sizing: border-box;
     }
 
     .dock-icon-box {
-        width: 40px;
-        height: 40px;
-        font-size: 18px;
+        width: 36px;
+        height: 36px;
+        font-size: 16px;
+        border-radius: 9px;
+    }
+
+    .dock-glass-divider {
+        height: 28px;
+        margin: 0 2px;
+    }
+
+    .dock-tooltip-bubble {
+        display: none !important;
     }
 
     .mac-window__title {

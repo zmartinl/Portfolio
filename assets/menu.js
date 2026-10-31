@@ -154,6 +154,7 @@ class MacLiquidPortfolio {
 
         const contentEl = document.querySelector('.mac-window-content');
         if (contentEl) contentEl.scrollTop = 0;
+        window.scrollTo(0, 0);
     }
 
     checkInitialHash() {
