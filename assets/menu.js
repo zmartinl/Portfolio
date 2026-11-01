@@ -82,6 +82,7 @@ class MacLiquidPortfolio {
         if (closeBtn) {
             closeBtn.addEventListener('click', () => {
                 this.windowEl.classList.add('is-closed');
+                document.body.classList.add('is-window-hidden');
                 if (this.reopenBanner) this.reopenBanner.classList.add('is-visible');
             });
         }
@@ -89,6 +90,7 @@ class MacLiquidPortfolio {
         if (minBtn) {
             minBtn.addEventListener('click', () => {
                 this.windowEl.classList.add('is-minimized');
+                document.body.classList.add('is-window-hidden');
                 if (this.reopenBanner) this.reopenBanner.classList.add('is-visible');
             });
         }
@@ -110,6 +112,7 @@ class MacLiquidPortfolio {
         if (!this.windowEl) return;
         this.windowEl.classList.remove('is-closed');
         this.windowEl.classList.remove('is-minimized');
+        document.body.classList.remove('is-window-hidden');
         if (this.reopenBanner) this.reopenBanner.classList.remove('is-visible');
     }
 
@@ -132,7 +135,8 @@ class MacLiquidPortfolio {
     }
 
     goToSection(sectionKey, isInitial = false) {
-        if (!isInitial && sectionKey === this.currentSection) return;
+        const isHidden = this.windowEl && (this.windowEl.classList.contains('is-closed') || this.windowEl.classList.contains('is-minimized'));
+        if (!isInitial && !isHidden && sectionKey === this.currentSection) return;
         this.restoreWindow();
 
         const targetPanel = document.getElementById(`section-${sectionKey}`);

@@ -1296,6 +1296,24 @@ body {
         flex: none;
     }
 
+    body.is-window-hidden,
+    body:has(.mac-window.is-closed),
+    body:has(.mac-window.is-minimized) {
+        overflow-y: hidden;
+    }
+
+    body.is-window-hidden .mac-dock-wrapper,
+    body:has(.mac-window.is-closed) .mac-dock-wrapper,
+    body:has(.mac-window.is-minimized) .mac-dock-wrapper {
+        position: fixed !important;
+        bottom: max(14px, env(safe-area-inset-bottom)) !important;
+        left: 0 !important;
+        width: 100% !important;
+        margin: 0 !important;
+        z-index: 1000 !important;
+        pointer-events: none !important;
+    }
+
     .about-editorial-grid,
     .skills-layout-grid,
     .contact-split-grid {
