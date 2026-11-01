@@ -148,6 +148,12 @@ class MacLiquidPortfolio {
             btn.classList.toggle('is-active', btn.getAttribute('data-dock-nav') === sectionKey);
         });
 
+        const titleEl = document.querySelector('.mac-window__title');
+        if (titleEl) {
+            const label = this.sectionLabels[sectionKey] || 'Portfolio';
+            titleEl.textContent = `Zeus Martín — ${label}`;
+        }
+
         if (window.history && window.history.replaceState) {
             window.history.replaceState(null, '', `#${sectionKey}`);
         }

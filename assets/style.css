@@ -1206,7 +1206,62 @@ body {
     transform: translateX(-50%) translateY(0);
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
+    html, body {
+        height: auto;
+        min-height: 100vh;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    .desktop-stage {
+        height: auto;
+        min-height: 100vh;
+        padding: 16px 14px 24px;
+        overflow: visible;
+    }
+
+    .mac-window {
+        height: auto;
+        max-height: none;
+        overflow: visible;
+        contain: none;
+        border-radius: 18px;
+    }
+
+    .mac-window__titlebar {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        z-index: 500;
+        background: rgba(18, 24, 34, 0.92);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border-top-left-radius: 18px;
+        border-top-right-radius: 18px;
+        border-bottom: 1px solid var(--glass-titlebar-border);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+    }
+
+    .mac-window-content {
+        overflow-y: visible;
+        padding: 28px 24px 36px;
+    }
+
+    .mac-dock-wrapper {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        width: 100%;
+        margin: 24px auto 36px;
+        display: flex;
+        justify-content: center;
+        z-index: 20;
+        pointer-events: auto;
+        padding: 0 8px;
+        box-sizing: border-box;
+    }
+
     .about-editorial-grid,
     .skills-layout-grid,
     .contact-split-grid {
@@ -1223,37 +1278,41 @@ body {
 }
 
 @media (max-width: 640px) {
-    html, body {
-        height: auto;
-        min-height: 100vh;
-        overflow-x: hidden;
-        overflow-y: auto;
-    }
-
     .desktop-stage {
-        height: auto;
-        min-height: 100vh;
-        padding: 14px 10px 115px;
-        overflow: visible;
+        padding: 10px 8px 16px;
     }
 
     .mac-window {
-        height: auto;
-        max-height: none;
-        border-radius: 16px;
+        border-radius: 14px;
+    }
+
+    .mac-window__titlebar {
+        height: 44px;
+        padding: 0 12px;
+        border-top-left-radius: 14px;
+        border-top-right-radius: 14px;
+    }
+
+    .mac-window__title {
+        display: block;
+        font-size: 12px;
+        font-weight: 700;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: calc(100vw - 140px);
     }
 
     .mac-window-content {
-        overflow-y: visible;
-        padding: 22px 18px 32px;
+        padding: 18px 14px 24px;
     }
 
     .section-head {
-        padding: 18px 20px;
+        padding: 16px 18px;
     }
 
     .hero-editorial__main {
-        padding: 24px;
+        padding: 20px 18px;
     }
 
     .projects-crystal-grid {
@@ -1262,6 +1321,11 @@ body {
 
     .hero-metrics-grid {
         grid-template-columns: 1fr;
+    }
+
+    .mac-dock-wrapper {
+        margin: 16px auto 30px;
+        padding: 0 4px;
     }
 
     .mac-dock-bar {
@@ -1285,9 +1349,5 @@ body {
 
     .dock-tooltip-bubble {
         display: none !important;
-    }
-
-    .mac-window__title {
-        display: none;
     }
 }
