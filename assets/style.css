@@ -1210,23 +1210,52 @@ body {
     html, body {
         height: auto;
         min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
         overflow-x: hidden;
         overflow-y: auto;
     }
 
     .desktop-stage {
+        width: 100%;
         height: auto;
-        min-height: 100vh;
-        padding: 16px 14px 24px;
+        min-height: auto;
+        display: block;
+        padding: 14px 12px 0;
+        box-sizing: border-box;
         overflow: visible;
+        flex: none;
     }
 
     .mac-window {
-        height: auto;
-        max-height: none;
-        overflow: visible;
-        contain: none;
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        max-height: none !important;
+        min-height: auto !important;
+        overflow: visible !important;
+        contain: none !important;
         border-radius: 18px;
+        transform: none !important;
+    }
+
+    .mac-window.is-maximized {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        max-height: none !important;
+        border-radius: 18px !important;
+        margin: 0 !important;
+    }
+
+    .mac-window.is-minimized {
+        display: none !important;
+    }
+
+    .mac-window.is-closed {
+        display: none !important;
     }
 
     .mac-window__titlebar {
@@ -1234,7 +1263,7 @@ body {
         position: sticky;
         top: 0;
         z-index: 500;
-        background: rgba(18, 24, 34, 0.92);
+        background: rgba(18, 24, 34, 0.94);
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);
         border-top-left-radius: 18px;
@@ -1245,7 +1274,9 @@ body {
 
     .mac-window-content {
         overflow-y: visible;
-        padding: 28px 24px 36px;
+        padding: 24px 20px 32px;
+        height: auto !important;
+        max-height: none !important;
     }
 
     .mac-dock-wrapper {
@@ -1260,6 +1291,7 @@ body {
         pointer-events: auto;
         padding: 0 8px;
         box-sizing: border-box;
+        flex: none;
     }
 
     .about-editorial-grid,
@@ -1279,7 +1311,7 @@ body {
 
 @media (max-width: 640px) {
     .desktop-stage {
-        padding: 10px 8px 16px;
+        padding: 10px 8px 0;
     }
 
     .mac-window {
@@ -1324,7 +1356,7 @@ body {
     }
 
     .mac-dock-wrapper {
-        margin: 16px auto 30px;
+        margin: 20px auto 32px;
         padding: 0 4px;
     }
 
