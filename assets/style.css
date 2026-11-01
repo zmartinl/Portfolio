@@ -465,7 +465,8 @@ body {
     background: var(--glass-card-bg);
     border: 1px solid var(--glass-card-border);
     box-shadow: var(--glass-card-shadow), var(--glass-card-rim);
-    transform: translateZ(0);
+    overflow: hidden;
+    background-clip: padding-box;
 }
 
 .section-head__eyebrow {
@@ -743,7 +744,8 @@ body {
     background: var(--glass-card-bg);
     border: 1px solid var(--glass-card-border);
     box-shadow: var(--glass-card-shadow), var(--glass-card-rim);
-    transform: translateZ(0);
+    overflow: hidden;
+    background-clip: padding-box;
 }
 
 .skill-cluster-header {
@@ -815,7 +817,6 @@ body {
 
 .timeline-stream-step {
     position: relative;
-    contain: layout paint;
 }
 
 .timeline-stream-step__bullet {
@@ -836,7 +837,8 @@ body {
     background: var(--glass-card-bg);
     border: 1px solid var(--glass-card-border);
     box-shadow: var(--glass-card-shadow), var(--glass-card-rim);
-    transform: translateZ(0);
+    overflow: hidden;
+    background-clip: padding-box;
 }
 
 .timeline-stream-step__period {
