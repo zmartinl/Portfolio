@@ -394,6 +394,15 @@ body {
     color: #ffffff;
 }
 
+.liquid-glass-btn--private {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.18);
+    color: var(--text-secondary);
+    cursor: default;
+    pointer-events: none;
+    box-shadow: none;
+}
+
 .hero-social-strip {
     display: flex;
     align-items: center;
@@ -730,6 +739,27 @@ body {
 
 .glass-inline-btn:hover {
     text-decoration: underline;
+}
+
+.glass-inline-btn--private {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11.5px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.7);
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    padding: 3px 8px;
+    border-radius: 6px;
+    cursor: default;
+    user-select: none;
+}
+
+.glass-inline-btn--private:hover {
+    text-decoration: none;
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.14);
 }
 
 .skills-layout-grid {

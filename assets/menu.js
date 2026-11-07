@@ -6,6 +6,14 @@ class MacLiquidPortfolio {
         this.modalEl = document.getElementById('projectModal');
 
         this.projectsData = {
+            minutIA: {
+                title: 'MinutIA Suite',
+                category: 'Laravel · NativePHP · IA Local',
+                img: './assets/img/minutia.png',
+                desc: 'Suite de escritorio para transcripción inteligente y minutado automático de grabaciones de audio mediante modelos locales de IA Whisper (100% offline y privado). Cuenta con organización por carpetas, extracción de clips, compatibilidad con múltiples formatos de audio y arquitectura orientada a producto comercial.',
+                techs: ['NativePHP', 'Laravel', 'Whisper AI', 'PHP', 'SQLite', 'JavaScript', 'Audio Processing'],
+                url: null
+            },
             guardsEVG: {
                 title: 'Gestor de Guardias',
                 category: 'Laravel · TFG',
@@ -257,9 +265,21 @@ class MacLiquidPortfolio {
             });
         }
         if (repoLinkEl) {
-            repoLinkEl.href = data.url;
-            repoLinkEl.target = '_blank';
-            repoLinkEl.rel = 'noopener noreferrer';
+            if (data.url) {
+                repoLinkEl.href = data.url;
+                repoLinkEl.target = '_blank';
+                repoLinkEl.rel = 'noopener noreferrer';
+                repoLinkEl.classList.remove('liquid-glass-btn--private');
+                repoLinkEl.removeAttribute('aria-disabled');
+                repoLinkEl.innerHTML = '<span>Abrir Repositorio en GitHub</span><i class="fa-solid fa-arrow-up-right-from-square"></i>';
+            } else {
+                repoLinkEl.removeAttribute('href');
+                repoLinkEl.removeAttribute('target');
+                repoLinkEl.removeAttribute('rel');
+                repoLinkEl.classList.add('liquid-glass-btn--private');
+                repoLinkEl.setAttribute('aria-disabled', 'true');
+                repoLinkEl.innerHTML = '<i class="fa-solid fa-lock"></i><span>Repositorio Privado · Producto Comercial</span>';
+            }
         }
 
         this.modalEl.classList.add('is-open');
