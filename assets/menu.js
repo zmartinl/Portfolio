@@ -12,7 +12,17 @@ class MacLiquidPortfolio {
                 img: './assets/img/minutia.png',
                 desc: 'Suite de escritorio para transcripción inteligente y minutado automático de grabaciones de audio mediante modelos locales de IA Whisper (100% offline y privado). Cuenta con organización por carpetas, extracción de clips, compatibilidad con múltiples formatos de audio y arquitectura orientada a producto comercial.',
                 techs: ['NativePHP', 'Laravel', 'Whisper AI', 'PHP', 'SQLite', 'JavaScript', 'Audio Processing'],
-                url: null
+                url: null,
+                privateLabel: 'Repositorio Privado · Producto Comercial'
+            },
+            planosVsdx: {
+                title: 'Conversor de Planos Manuales → VSDX',
+                category: 'Visión · Full-Stack · Visio',
+                img: './assets/img/planos-vsdx.jpg',
+                desc: 'Herramienta inteligente que analiza planos hechos a mano mediante un modelo para detectar puntos de red (simples y múltiples), permite calibrar su posición exacta sobre el plano con editor Drag & Drop, zoom y gestión de etiquetas, y genera automáticamente un archivo Microsoft Visio (.vsdx) pasado a limpio.',
+                techs: ['Modelo Visión', 'Generación .VSDX', 'JavaScript', 'Drag & Drop', 'Calibración XY', 'Full-Stack'],
+                url: null,
+                privateLabel: 'Repositorio Privado'
             },
             guardsEVG: {
                 title: 'Gestor de Guardias',
@@ -30,14 +40,6 @@ class MacLiquidPortfolio {
                 techs: ['Laravel', 'PHP', 'Bootstrap', 'JavaScript', 'Git', 'GitHub', 'MySQL'],
                 url: 'https://github.com/zmartinl/TaskManager'
             },
-            concesionario: {
-                title: 'Concesionario de Vehículos',
-                category: 'Laravel · Gestión',
-                img: './assets/img/concesionario.png',
-                desc: 'Sistema integral de gestión de un concesionario de vehículos que abarca control de catálogo, inventario en stock, fichas de automóviles y operaciones de venta.',
-                techs: ['Laravel', 'PHP', 'Bootstrap', 'JavaScript', 'Git', 'GitHub', 'MySQL'],
-                url: 'https://github.com/zmartinl/Concesionario'
-            },
             reservaLibros: {
                 title: 'Reserva de Libros',
                 category: 'PHP · Base de Datos',
@@ -53,14 +55,6 @@ class MacLiquidPortfolio {
                 desc: 'Simulación de pagos móviles inmediatos entre usuarios con autenticación, transferencias en tiempo real, balance de cuenta e historial transaccional.',
                 techs: ['Java', 'SQL', 'POO'],
                 url: 'https://github.com/zmartinl/Bizum'
-            },
-            tresEnRaya: {
-                title: '3 en raya',
-                category: 'Java · Swing',
-                img: './assets/img/3enraya.jpg',
-                desc: 'Implementación del clásico juego estratégico desarrollado en Java con interfaz gráfica Java Swing y arquitectura orientada a objetos.',
-                techs: ['Java', 'Swing', 'POO'],
-                url: 'https://github.com/zmartinl/3EnRaya'
             }
         };
 
@@ -273,12 +267,13 @@ class MacLiquidPortfolio {
                 repoLinkEl.removeAttribute('aria-disabled');
                 repoLinkEl.innerHTML = '<span>Abrir Repositorio en GitHub</span><i class="fa-solid fa-arrow-up-right-from-square"></i>';
             } else {
+                const privateLabel = data.privateLabel || 'Repositorio Privado';
                 repoLinkEl.removeAttribute('href');
                 repoLinkEl.removeAttribute('target');
                 repoLinkEl.removeAttribute('rel');
                 repoLinkEl.classList.add('liquid-glass-btn--private');
                 repoLinkEl.setAttribute('aria-disabled', 'true');
-                repoLinkEl.innerHTML = '<i class="fa-solid fa-lock"></i><span>Repositorio Privado · Producto Comercial</span>';
+                repoLinkEl.innerHTML = `<i class="fa-solid fa-lock"></i><span>${privateLabel}</span>`;
             }
         }
 
